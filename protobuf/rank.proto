@@ -1,0 +1,18 @@
+package gameMsg;
+
+message RankData{//排行数据
+  required string id = 1;//用户id
+  required string sNick = 2;//用户昵称
+  required int32 nRank = 3;// 排名
+  required int32 starNum = 4;//总星数
+
+}
+
+message RankRequest {//排行请求协议
+  required string sID = 1;//用户id，微信openid
+}
+
+message RankResponse {//排行响应协议
+  repeated RankData rankDatas = 1;//前20名用户排行
+}
+

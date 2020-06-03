@@ -1,0 +1,11 @@
+package gameMsg;
+
+enum ErrorCode {
+    success = 1;
+    userinvaild = 2; //无效的用户
+    pwderror  = 3; //密码错误
+    moneyerror = 4; //金币不足
+    gateunlock = 5; //关卡未解锁
+    ptomptnone = 6; //提示机会不足
+    maxgates = 7; //全部通关，大满贯
+}

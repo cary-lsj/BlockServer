@@ -1,0 +1,31 @@
+package gameMsg;
+
+message User{//用户
+  required string nUserID = 1;//用户id
+  optional string sNick = 2;//用户昵称
+  optional int32 nExp = 3;//用户经验值
+  optional int32 nGold = 4;//用户游戏币
+  optional string sHeadimg = 5;//用户头像
+  optional int32 starNum = 6;//玩家获得星星总数
+}
+
+message Gate{//关卡数据
+  required int32 id = 1;//关卡id
+  required int32  starNum = 2;//获得星星数
+}
+
+message LoginRequest {//登录请求协议
+  required string sID = 1;//用户ID
+  optional string sNick = 2;//用户昵称
+  optional string sHeadimg = 3;//用户头像
+}
+
+message LoginResponse {//登录响应协议
+  optional User requester = 1;//用户信息
+  repeated Gate gates = 2;//关卡信息，已经解锁的所有关卡
+  optional int32 nExp = 3;//用户经验值
+  optional int32 nGold = 4;//用户游戏币
+  optional int32 nTotalStar = 5;//用户总星级
+  optional int32 nTotalGate = 6;//总关数
+}
+

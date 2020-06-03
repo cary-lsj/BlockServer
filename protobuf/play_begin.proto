@@ -1,0 +1,12 @@
+package gameMsg;
+
+message PlayBeginRequest {//玩关卡请求协议
+  required string sID = 1;//用户id，微信openid
+  required  int32 gateID = 2;//关卡id
+}
+
+message PlayBeginResponse {//玩关卡响应协议
+  required int32 gateId = 1;//关卡id
+  optional int32 nTopStar = 2;//当前关卡玩过的最高星级
+  optional int32 nPrompt = 3;//当前拥有的提示机会个数
+}

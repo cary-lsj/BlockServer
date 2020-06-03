@@ -1,0 +1,28 @@
+package gameMsg;
+
+message PlayBlockAddRequest {//放置木块请求协议
+  required string sID = 1;//用户id，微信openid
+  required  string sRoomID = 2;//房间id
+  required  int32 gateID = 3;//关卡id
+}
+
+message PlayBlockAddResponse {//放置木块响应协议
+
+}
+
+message PlayBlockDeleteRequest {//移除木块请求协议
+  required string sID = 1;//用户id，微信openid
+  required  string sRoomID = 2;//房间id
+  required  int32 gateID = 3;//关卡id
+}
+
+message PlayBlockDeleteResponse {//移除木块响应协议
+
+}
+
+message PlayBlockNotify {//放置木块通知协议
+  required string sID = 1;//用户id，微信openid
+  required  string sRoomID = 2;//房间id
+  required  int32 gateID = 3;//关卡id
+  required  bool isAdd = 4;//放置/移除
+}

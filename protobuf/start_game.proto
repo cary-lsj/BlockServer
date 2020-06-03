@@ -1,0 +1,27 @@
+package gameMsg;
+
+message StartGameRequest {//开始游戏请求协议
+  required string sID = 1;//用户（房主）id，微信openid
+  required string sRoomID = 2;//房间ID
+}
+
+message StartGameResponse {//开始游戏响应协议
+}
+
+message StartGameNotify {//开始房间游戏通知协议
+  required string sRoomID = 1;//房间ID
+  required int32 nGID = 2;//关卡ID
+}
+
+message TimerGameNotify {//房间计时通知协议
+  required string sRoomID = 1;//房间ID
+  required int32 nTime = 2;//倒计时
+}
+
+message MatchGameRequest {//匹配游戏请求协议
+  required string sID = 1;//用户（房主）id，微信openid
+  required string sRoomID = 2;//房间ID
+}
+
+message MatchGameResponse {//匹配游戏响应协议
+}

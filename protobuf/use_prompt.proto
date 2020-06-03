@@ -1,0 +1,10 @@
+package gameMsg;
+
+message UsePromptRequest {//提示机会请求协议
+  required string sID = 1;//用户id，微信openid
+}
+
+message UsePromptResponse {//提示机会响应协议
+  optional int32 nPrompt = 1;//当前拥有的提示机会个数
+}
+

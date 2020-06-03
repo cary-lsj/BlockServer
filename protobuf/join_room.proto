@@ -1,0 +1,28 @@
+package gameMsg;
+
+message Gamer {//逻辑玩家消息体
+  required string sID= 1;//房间内用户ID
+  optional string sHeadImg = 2;//用户头像
+  optional string sNick = 3;//用户昵称
+  optional int32 nRankLevel= 4;//用户排位等级
+}
+
+message Room {//房间消息体
+  repeated Gamer gamers = 1;//房间内用户
+  required string sRoomID = 2;//房间ID
+  required string sBossID = 3;//房主ID
+}
+
+message JoinRoomRequest {//加入房间请求协议
+  required string sID = 1;//用户ID
+  required string sRoomID = 2;//房间ID
+}
+
+message JoinRoomResponse {//加入房间响应协议
+  required Room joinRoom = 1;//房间
+}
+
+message JoinRoomNotify {//加入房间通知协议
+  required Gamer joinGamer = 1;//加入的玩家信息
+}
+

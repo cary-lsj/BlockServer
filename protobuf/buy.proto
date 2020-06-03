@@ -1,0 +1,17 @@
+package gameMsg;
+
+import "assets.proto";
+
+message Good{//商品
+  required int32 nID = 1;//商品id
+  required int32 nCount = 2;//购买数量
+}
+
+message BuyRequest {//购买请求协议
+  required string nUserID = 1;//用户ID
+  repeated Good goods = 2;//要购买的商品
+}
+
+message BuyResponse {//购买响应协议
+  optional AssetUpdate newAssets = 1;//新资产
+}

@@ -1,0 +1,10 @@
+package gameMsg;
+
+message CreateRoomRequest {//创建房间请求协议
+  required string sID = 1;//用户ID
+}
+
+message CreateRoomResponse {//创建房间响应协议
+  required string sRoomID = 1;//房间ID
+}
+

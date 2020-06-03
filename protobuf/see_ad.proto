@@ -1,0 +1,11 @@
+package gameMsg;
+
+message SeeAdRequest {//看广告请求协议
+  required string sID = 1;//用户id，微信openid
+  required  int32 adID = 2;//广告id
+}
+
+message SeeAdResponse {//看广告响应协议
+  optional int32 nPrompt = 1;//当前拥有的提示机会个数
+}
+

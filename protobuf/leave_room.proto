@@ -1,0 +1,14 @@
+package gameMsg;
+message LeaveRoomRequest {//离开房间请求协议
+  required string sID = 1;//用户ID
+  required string sRoomID = 2;//房间ID
+}
+
+message LeaveRoomResponse {//离开房间响应协议
+  required int32 nErrorCode = 1;//错误码
+}
+
+message LeaveRoomNotify {//离开房间通知协议
+  required string sID = 1;//用户ID
+  required string sRoomID = 2;//房间ID
+}

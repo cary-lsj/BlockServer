@@ -1,0 +1,17 @@
+package gameMsg;
+
+message UseToolRequest {//使用道具请求协议
+  required string sID = 1;//用户id，微信openid
+  required  string goodID = 2;//道具id
+  required  string sRoomID = 3;//房间id
+  required  string sDID = 4;//被使用者id
+}
+
+message UseToolResponse {//使用道具响应协议
+}
+
+message UseToolNotify {//使用道具通知协议
+  required string sID = 1;//使用道具用户id，微信openid
+  required  string goodID = 2;//道具id
+  required  string sDID = 3;//被使用者id
+}

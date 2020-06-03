@@ -1,0 +1,119 @@
+package gameMsg;
+
+import "errorcode.proto";
+import "login.proto";
+import "play_begin.proto";
+import "play_end.proto";
+import "see_ad.proto";
+import "use_prompt.proto";
+import "rank.proto";
+import "create_room.proto";
+import "join_room.proto";
+import "leave_room.proto";
+import "start_game.proto";
+import "end_game.proto";
+import "game_tick.proto";
+import "use_tool.proto";
+import "buy.proto";
+import "play_block.proto";
+
+
+enum EnumMsg {
+  loginrequest = 1;
+  loginresponse = 2;
+  playbeginrequest = 3;
+  playbeginresponse = 4;
+  playendrequest = 5;
+  playendresponse = 6;
+  seeadrequest = 7;
+  seeadresponse = 8;
+  usepromptrequest = 9;
+  usepromptresponse = 10;
+  rankrequest = 11;
+  rankresponse = 12;
+  createroomrequest = 13;
+  createroomresponse = 14;
+  joinroomrequest = 15;
+  joinroomresponse = 16;
+  joinroomnotify= 17;
+  leaveroomrequest= 18;
+  leaveroomresponse= 19;
+  leaveroomnotify= 20;
+  startgamenotify= 21;
+  endgamerequest= 22;
+  endgameresponse= 23;
+  endgamenotify= 24;
+  gametimeticknotify = 25;
+  startgamerequest= 26;
+  startgameresponse= 27;
+  matchgamerequest= 28;
+  matchgameresponse= 29;
+  usetoolrequest= 30;
+  usetoolresponse= 31;
+  usetoolnotify= 32;
+  overtimenotify= 33;
+  buyrequest= 34;
+  buyresponse= 35;
+  playblockaddrequest= 36;
+  playblockaddresponse= 37;
+  playblockdeleterequest= 38;
+  playblockdeleteresponse= 39;
+  playblocknotify= 40;
+}
+
+message Request {//请求协议
+  optional LoginRequest loginRequest = 1;
+  optional PlayBeginRequest playBeginRequest = 2;
+  optional PlayEndRequest playEndRequest = 3;
+  optional SeeAdRequest seeAdRequest = 4;
+  optional UsePromptRequest usePromptRequest = 5;
+  optional RankRequest rankRequest = 6;
+  optional CreateRoomRequest createRoomRequest = 7;
+  optional JoinRoomRequest joinRoomRequest = 8;
+  optional LeaveRoomRequest leaveRoomRequest = 9;
+  optional EndGameRequest endGameRequest = 10;
+  optional StartGameRequest startGameRequest = 11;
+  optional MatchGameRequest matchGameRequest = 12;
+  optional UseToolRequest useToolRequest = 13;
+  optional BuyRequest buyRequest = 14;
+  optional PlayBlockAddRequest playBlockAddRequest = 15;
+  optional PlayBlockDeleteRequest playBlockDeleteRequest = 16;
+}
+
+message Response {//响应协议
+  required ErrorCode nErrorCode = 1;//错误码
+  optional LoginResponse loginResponse = 2;
+  optional PlayBeginResponse playBeginResponse = 3;
+  optional PlayEndResponse playEndResponse = 4;
+  optional SeeAdResponse seeAdResponse = 5;
+  optional UsePromptResponse usePromptResponse = 6;
+  optional RankResponse rankResponse = 7;
+  optional CreateRoomResponse createRoomResponse = 8;
+  optional JoinRoomResponse joinRoomResponse = 9;
+  optional LeaveRoomResponse leaveRoomResponse = 10;
+  optional EndGameResponse endGameResponse = 11;
+  optional StartGameResponse startGameResponse = 12;
+  optional MatchGameResponse matchGameResponse = 13;
+  optional UseToolResponse useToolResponse = 14;
+  optional BuyResponse buyResponse = 15;
+  optional PlayBlockAddResponse playBlockAddResponse = 16;
+  optional PlayBlockDeleteResponse playBlockDeleteResponse = 17;
+}
+
+message Notify {//通知协议
+  optional JoinRoomNotify joinRoomNotify = 1;
+  optional LeaveRoomNotify leaveRoomNotify = 2;
+  optional StartGameNotify startGameNotify = 3;
+  optional EndGameNotify endGameNotify = 4;
+  optional GameTimeTickNotify gameTimeTickNotify = 5;
+  optional UseToolNotify useToolNotify = 6;
+  optional OverTimeNotify overTimeNotify = 7;
+  optional PlayBlockNotify playBlockNotify = 8;
+}
+
+message Msg {//消息
+   required EnumMsg type = 1;
+   optional Request request = 2;
+   optional Response response = 3;
+   optional Notify notify = 4;
+}

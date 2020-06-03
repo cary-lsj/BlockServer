@@ -1,0 +1,4 @@
+package gameMsg;
+message GameTimeTickNotify {//游戏倒计时通知协议,1s同步一次
+  required int32 nLeft = 1;//用户剩余倒计时，为0的时候取消倒计时显示（可提前取消）
+}

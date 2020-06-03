@@ -1,0 +1,370 @@
+2018-09-02 12:27:58,586 - tornado.application - ERROR - Uncaught exception POST /loginwx (58.33.129.88)
+HTTPServerRequest(protocol='https', host='www.lichiyang.club:8002', method='POST', uri='/loginwx', version='HTTP/1.1', remote_ip='58.33.129.88')
+Traceback (most recent call last):
+  File "C:\python\python2.7\lib\site-packages\tornado\web.py", line 1541, in _execute
+    result = method(*self.path_args, **self.path_kwargs)
+  File "C:/python/BlockGameServer\handlers\loginWXHandler.py", line 48, in post
+    if nick != "" and nick != user.nick:
+  File "C:/python/BlockGameServer\orm\orm.py", line 56, in __getattr__
+    raise AttributeError(r"'Model' object has no attribute '%s'" % key)
+AttributeError: 'Model' object has no attribute 'nick'
+2018-09-02 12:27:58,618 - tornado.access - ERROR - 500 POST /loginwx (58.33.129.88) 47973.00ms
+2018-09-02 12:29:47,325 - tornado.application - ERROR - Uncaught exception POST /loginwx (58.33.129.88)
+HTTPServerRequest(protocol='https', host='www.lichiyang.club:8002', method='POST', uri='/loginwx', version='HTTP/1.1', remote_ip='58.33.129.88')
+Traceback (most recent call last):
+  File "C:\python\python2.7\lib\site-packages\tornado\web.py", line 1541, in _execute
+    result = method(*self.path_args, **self.path_kwargs)
+  File "C:/python/BlockGameServer\handlers\loginWXHandler.py", line 48, in post
+    if nick != "" and nick != user.nick:
+  File "C:/python/BlockGameServer\orm\orm.py", line 56, in __getattr__
+    raise AttributeError(r"'Model' object has no attribute '%s'" % key)
+AttributeError: 'Model' object has no attribute 'nick'
+2018-09-02 12:29:47,325 - tornado.access - ERROR - 500 POST /loginwx (58.33.129.88) 102225.00ms
+2018-09-02 12:59:03,829 - tornado.application - ERROR - Uncaught exception POST /loginwx (58.33.129.88)
+HTTPServerRequest(protocol='https', host='www.lichiyang.club:8002', method='POST', uri='/loginwx', version='HTTP/1.1', remote_ip='58.33.129.88')
+Traceback (most recent call last):
+  File "C:\python\python2.7\lib\site-packages\tornado\web.py", line 1541, in _execute
+    result = method(*self.path_args, **self.path_kwargs)
+  File "C:/python/BlockGameServer\handlers\loginWXHandler.py", line 48, in post
+    if nick != "" and nick != user.nick:
+  File "C:/python/BlockGameServer\orm\orm.py", line 56, in __getattr__
+    raise AttributeError(r"'Model' object has no attribute '%s'" % key)
+AttributeError: 'Model' object has no attribute 'nick'
+2018-09-02 12:59:03,845 - tornado.access - ERROR - 500 POST /loginwx (58.33.129.88) 8326.00ms
+2018-09-02 13:05:08,756 - tornado.application - ERROR - Uncaught exception POST /loginwx (58.33.129.88)
+HTTPServerRequest(protocol='https', host='www.lichiyang.club:8002', method='POST', uri='/loginwx', version='HTTP/1.1', remote_ip='58.33.129.88')
+Traceback (most recent call last):
+  File "C:\python\python2.7\lib\site-packages\tornado\web.py", line 1541, in _execute
+    result = method(*self.path_args, **self.path_kwargs)
+  File "C:/python/BlockGameServer\handlers\loginWXHandler.py", line 48, in post
+    if nick != "" and nick != user.nick:
+  File "C:/python/BlockGameServer\orm\orm.py", line 56, in __getattr__
+    raise AttributeError(r"'Model' object has no attribute '%s'" % key)
+AttributeError: 'Model' object has no attribute 'nick'
+2018-09-02 13:05:08,756 - tornado.access - ERROR - 500 POST /loginwx (58.33.129.88) 339103.00ms
+2018-09-02 13:05:16,209 - tornado.application - ERROR - Uncaught exception POST /loginwx (58.33.129.88)
+HTTPServerRequest(protocol='https', host='www.lichiyang.club:8002', method='POST', uri='/loginwx', version='HTTP/1.1', remote_ip='58.33.129.88')
+Traceback (most recent call last):
+  File "C:\python\python2.7\lib\site-packages\tornado\web.py", line 1541, in _execute
+    result = method(*self.path_args, **self.path_kwargs)
+  File "C:/python/BlockGameServer\handlers\loginWXHandler.py", line 48, in post
+    if nick != "" and nick != user.nick:
+  File "C:/python/BlockGameServer\orm\orm.py", line 56, in __getattr__
+    raise AttributeError(r"'Model' object has no attribute '%s'" % key)
+AttributeError: 'Model' object has no attribute 'nick'
+2018-09-02 13:05:16,209 - tornado.access - ERROR - 500 POST /loginwx (58.33.129.88) 7343.00ms
+2018-09-02 13:07:46,078 - tornado.application - ERROR - Uncaught exception POST /loginwx (58.33.129.88)
+HTTPServerRequest(protocol='https', host='www.lichiyang.club:8002', method='POST', uri='/loginwx', version='HTTP/1.1', remote_ip='58.33.129.88')
+Traceback (most recent call last):
+  File "C:\python\python2.7\lib\site-packages\tornado\web.py", line 1541, in _execute
+    result = method(*self.path_args, **self.path_kwargs)
+  File "C:/python/BlockGameServer\handlers\loginWXHandler.py", line 48, in post
+    if nick != "" and nick != user.nick:
+  File "C:/python/BlockGameServer\orm\orm.py", line 56, in __getattr__
+    raise AttributeError(r"'Model' object has no attribute '%s'" % key)
+AttributeError: 'Model' object has no attribute 'nick'
+2018-09-02 13:07:46,108 - tornado.access - ERROR - 500 POST /loginwx (58.33.129.88) 126728.00ms
+2018-09-02 13:18:13,023 - tornado.application - ERROR - Uncaught exception POST /loginwx (58.33.129.88)
+HTTPServerRequest(protocol='https', host='www.lichiyang.club:8002', method='POST', uri='/loginwx', version='HTTP/1.1', remote_ip='58.33.129.88')
+Traceback (most recent call last):
+  File "C:\python\python2.7\lib\site-packages\tornado\web.py", line 1541, in _execute
+    result = method(*self.path_args, **self.path_kwargs)
+  File "C:/python/BlockGameServer\handlers\loginWXHandler.py", line 49, in post
+    if nick != "" and nick != user.nick:
+  File "C:/python/BlockGameServer\orm\orm.py", line 56, in __getattr__
+    raise AttributeError(r"'Model' object has no attribute '%s'" % key)
+AttributeError: 'Model' object has no attribute 'nick'
+2018-09-02 13:18:13,053 - tornado.access - ERROR - 500 POST /loginwx (58.33.129.88) 220186.00ms
+2018-09-02 13:18:54,831 - tornado.application - ERROR - Uncaught exception POST /loginwx (58.33.129.88)
+HTTPServerRequest(protocol='https', host='www.lichiyang.club:8002', method='POST', uri='/loginwx', version='HTTP/1.1', remote_ip='58.33.129.88')
+Traceback (most recent call last):
+  File "C:\python\python2.7\lib\site-packages\tornado\web.py", line 1541, in _execute
+    result = method(*self.path_args, **self.path_kwargs)
+  File "C:/python/BlockGameServer\handlers\loginWXHandler.py", line 49, in post
+    if nick != "" and nick != user.nick:
+  File "C:/python/BlockGameServer\orm\orm.py", line 56, in __getattr__
+    raise AttributeError(r"'Model' object has no attribute '%s'" % key)
+AttributeError: 'Model' object has no attribute 'nick'
+2018-09-02 13:18:54,831 - tornado.access - ERROR - 500 POST /loginwx (58.33.129.88) 9877.00ms
+2018-09-02 13:19:05,193 - tornado.application - ERROR - Uncaught exception POST /loginwx (58.33.129.88)
+HTTPServerRequest(protocol='https', host='www.lichiyang.club:8002', method='POST', uri='/loginwx', version='HTTP/1.1', remote_ip='58.33.129.88')
+Traceback (most recent call last):
+  File "C:\python\python2.7\lib\site-packages\tornado\web.py", line 1541, in _execute
+    result = method(*self.path_args, **self.path_kwargs)
+  File "C:/python/BlockGameServer\handlers\loginWXHandler.py", line 49, in post
+    if nick != "" and nick != user.nick:
+  File "C:/python/BlockGameServer\orm\orm.py", line 56, in __getattr__
+    raise AttributeError(r"'Model' object has no attribute '%s'" % key)
+AttributeError: 'Model' object has no attribute 'nick'
+2018-09-02 13:19:05,193 - tornado.access - ERROR - 500 POST /loginwx (58.33.129.88) 15.00ms
+2018-09-02 13:19:36,983 - tornado.application - ERROR - Uncaught exception POST /loginwx (58.33.129.88)
+HTTPServerRequest(protocol='https', host='www.lichiyang.club:8002', method='POST', uri='/loginwx', version='HTTP/1.1', remote_ip='58.33.129.88')
+Traceback (most recent call last):
+  File "C:\python\python2.7\lib\site-packages\tornado\web.py", line 1541, in _execute
+    result = method(*self.path_args, **self.path_kwargs)
+  File "C:/python/BlockGameServer\handlers\loginWXHandler.py", line 49, in post
+    if nick != "" and nick != user.nick:
+  File "C:/python/BlockGameServer\orm\orm.py", line 56, in __getattr__
+    raise AttributeError(r"'Model' object has no attribute '%s'" % key)
+AttributeError: 'Model' object has no attribute 'nick'
+2018-09-02 13:19:36,983 - tornado.access - ERROR - 500 POST /loginwx (58.33.129.88) 23683.00ms
+2018-09-02 13:21:49,826 - tornado.access - INFO - 200 POST /loginwx (58.33.129.88) 33115.00ms
+2018-09-02 13:22:56,588 - tornado.access - INFO - 200 POST /loginwx (58.33.129.88) 8580.00ms
+2018-09-02 13:24:25,628 - tornado.access - INFO - 200 POST /loginwx (58.33.129.88) 15.00ms
+2018-09-02 13:32:33,407 - tornado.application - ERROR - Uncaught exception POST /loginwx (58.33.129.88)
+HTTPServerRequest(protocol='https', host='www.lichiyang.club:8002', method='POST', uri='/loginwx', version='HTTP/1.1', remote_ip='58.33.129.88')
+Traceback (most recent call last):
+  File "C:\python\python2.7\lib\site-packages\tornado\web.py", line 1541, in _execute
+    result = method(*self.path_args, **self.path_kwargs)
+  File "C:/python/BlockGameServer\handlers\loginWXHandler.py", line 74, in post
+    msg["type"] = 2
+NameError: global name 'msg' is not defined
+2018-09-02 13:32:33,407 - tornado.access - ERROR - 500 POST /loginwx (58.33.129.88) 109.00ms
+2018-09-02 13:33:02,288 - tornado.access - INFO - 200 POST /loginwx (58.33.129.88) 63.00ms
+2018-09-02 13:35:34,811 - tornado.access - INFO - 200 POST /loginwx (58.33.129.88) 16.00ms
+2018-09-02 13:36:51,180 - tornado.access - INFO - 200 POST /loginwx (58.33.129.88) 15.00ms
+2018-09-02 13:59:02,826 - tornado.access - INFO - 200 POST /loginwx (223.91.51.204) 31.00ms
+2018-09-02 14:02:16,131 - tornado.access - INFO - 200 POST /loginwx (115.51.8.68) 15.00ms
+2018-09-02 14:21:26,743 - tornado.access - INFO - 200 POST /loginwx (223.91.51.204) 15.00ms
+2018-09-02 14:22:39,529 - tornado.access - INFO - 200 POST /loginwx (117.158.83.73) 16.00ms
+2018-09-02 14:26:47,049 - tornado.access - INFO - 200 POST /loginwx (117.158.83.73) 16.00ms
+2018-09-02 14:28:26,226 - tornado.access - INFO - 200 POST /loginwx (117.158.83.73) 15.00ms
+2018-09-02 14:29:58,752 - tornado.access - INFO - 200 POST /loginwx (117.158.83.73) 16.00ms
+2018-09-02 14:34:12,457 - tornado.access - INFO - 200 POST /loginwx (117.158.83.73) 16.00ms
+2018-09-02 14:37:05,831 - tornado.access - INFO - 200 POST /loginwx (115.51.8.68) 16.00ms
+2018-09-02 14:37:28,492 - tornado.access - INFO - 200 POST /loginwx (223.91.51.204) 47.00ms
+2018-09-02 14:40:39,371 - tornado.access - INFO - 200 POST /loginwx (223.91.51.204) 15.00ms
+2018-09-02 14:41:33,167 - tornado.access - INFO - 200 POST /loginwx (117.158.83.73) 16.00ms
+2018-09-02 14:43:42,713 - tornado.access - INFO - 200 POST /loginwx (223.91.51.204) 16.00ms
+2018-09-02 14:43:43,684 - tornado.access - INFO - 200 POST /loginwx (223.91.51.204) 31.00ms
+2018-09-02 14:44:09,095 - tornado.access - INFO - 200 POST /loginwx (115.51.8.68) 15.00ms
+2018-09-02 14:47:50,321 - tornado.access - INFO - 200 POST /loginwx (117.158.83.73) 16.00ms
+2018-09-02 14:49:43,687 - tornado.access - INFO - 200 POST /loginwx (117.158.83.73) 15.00ms
+2018-09-02 14:50:02,736 - tornado.access - INFO - 200 POST /loginwx (117.158.83.73) 16.00ms
+2018-09-02 14:50:08,763 - tornado.access - INFO - 200 POST /loginwx (117.158.83.73) 16.00ms
+2018-09-02 14:52:30,832 - tornado.access - INFO - 200 POST /loginwx (115.51.8.68) 16.00ms
+2018-09-02 14:52:53,967 - tornado.access - INFO - 200 POST /loginwx (117.158.83.73) 16.00ms
+2018-09-02 14:53:04,094 - tornado.access - INFO - 200 POST /loginwx (115.51.8.68) 15.00ms
+2018-09-02 14:53:48,188 - tornado.access - INFO - 200 POST /loginwx (115.51.8.68) 16.00ms
+2018-09-02 14:54:35,163 - tornado.access - INFO - 200 POST /loginwx (117.158.83.73) 16.00ms
+2018-09-02 14:55:16,940 - tornado.access - INFO - 200 POST /loginwx (115.51.8.68) 16.00ms
+2018-09-02 14:56:40,904 - tornado.access - INFO - 200 POST /loginwx (117.158.83.73) 16.00ms
+2018-09-02 14:59:13,535 - tornado.access - INFO - 200 POST /loginwx (117.158.83.73) 15.00ms
+2018-09-02 14:59:15,319 - tornado.access - INFO - 200 POST /loginwx (115.51.8.68) 16.00ms
+2018-09-02 15:01:49,309 - tornado.access - INFO - 200 POST /loginwx (115.51.8.68) 0.00ms
+2018-09-02 15:04:07,798 - tornado.access - INFO - 200 POST /loginwx (117.158.83.73) 16.00ms
+2018-09-02 15:04:19,269 - tornado.access - INFO - 200 POST /loginwx (117.158.83.73) 16.00ms
+2018-09-02 15:06:24,532 - tornado.access - INFO - 200 POST /loginwx (223.91.51.204) 16.00ms
+2018-09-02 15:06:28,210 - tornado.access - INFO - 200 POST /loginwx (223.91.51.204) 16.00ms
+2018-09-02 15:08:09,107 - tornado.access - INFO - 200 POST /loginwx (117.158.83.73) 15.00ms
+2018-09-02 15:08:13,395 - tornado.access - INFO - 200 POST /loginwx (117.158.83.73) 16.00ms
+2018-09-02 15:08:57,434 - tornado.access - INFO - 200 POST /loginwx (223.91.51.204) 0.00ms
+2018-09-02 15:09:01,957 - tornado.access - INFO - 200 POST /loginwx (223.91.51.204) 16.00ms
+2018-09-02 15:10:26,770 - tornado.access - INFO - 200 POST /loginwx (223.91.51.204) 16.00ms
+2018-09-02 15:10:32,342 - tornado.access - INFO - 200 POST /loginwx (223.91.51.204) 16.00ms
+2018-09-02 15:10:45,187 - tornado.access - INFO - 200 POST /loginwx (223.91.51.204) 15.00ms
+2018-09-02 15:11:23,743 - tornado.access - INFO - 200 POST /loginwx (117.158.83.73) 16.00ms
+2018-09-02 15:11:38,201 - tornado.access - INFO - 200 POST /loginwx (223.91.51.204) 16.00ms
+2018-09-02 15:12:37,427 - tornado.access - INFO - 200 POST /loginwx (117.158.83.73) 15.00ms
+2018-09-02 15:12:56,267 - tornado.access - INFO - 200 POST /loginwx (223.91.51.204) 0.00ms
+2018-09-02 15:14:03,036 - tornado.access - INFO - 200 POST /loginwx (223.91.51.204) 16.00ms
+2018-09-02 15:14:36,772 - tornado.access - INFO - 200 POST /loginwx (117.158.83.73) 15.00ms
+2018-09-02 15:14:44,236 - tornado.access - INFO - 200 POST /loginwx (223.91.51.204) 16.00ms
+2018-09-02 15:14:48,242 - tornado.access - INFO - 200 POST /loginwx (117.158.83.73) 16.00ms
+2018-09-02 15:14:51,684 - tornado.access - INFO - 200 POST /loginwx (117.158.83.73) 16.00ms
+2018-09-02 15:15:46,654 - tornado.access - INFO - 200 POST /loginwx (117.158.83.73) 16.00ms
+2018-09-02 15:16:50,026 - tornado.access - INFO - 200 POST /loginwx (117.158.83.73) 16.00ms
+2018-09-02 15:17:58,421 - tornado.access - INFO - 200 POST /loginwx (117.158.83.73) 31.00ms
+2018-09-02 15:18:43,987 - tornado.access - INFO - 200 POST /loginwx (223.91.51.204) 16.00ms
+2018-09-02 15:19:34,436 - tornado.access - INFO - 200 POST /loginwx (117.158.83.73) 16.00ms
+2018-09-02 15:19:36,970 - tornado.access - INFO - 200 POST /loginwx (223.91.51.204) 15.00ms
+2018-09-02 15:20:02,650 - tornado.access - INFO - 200 POST /loginwx (115.51.8.68) 31.00ms
+2018-09-02 15:21:28,059 - tornado.access - INFO - 200 POST /loginwx (223.91.51.204) 16.00ms
+2018-09-02 15:22:07,709 - tornado.access - INFO - 200 POST /loginwx (115.51.8.68) 16.00ms
+2018-09-02 15:23:12,684 - tornado.access - INFO - 200 POST /loginwx (115.51.8.68) 0.00ms
+2018-09-02 15:25:42,451 - tornado.access - INFO - 200 POST /loginwx (223.91.51.204) 16.00ms
+2018-09-02 15:26:28,846 - tornado.access - INFO - 200 POST /loginwx (117.158.83.73) 16.00ms
+2018-09-02 15:28:56,611 - tornado.access - INFO - 200 POST /loginwx (117.158.83.73) 16.00ms
+2018-09-02 15:29:09,305 - tornado.access - INFO - 200 POST /loginwx (117.158.83.73) 16.00ms
+2018-09-02 15:29:35,555 - tornado.access - INFO - 200 POST /loginwx (223.91.51.204) 16.00ms
+2018-09-02 15:30:20,835 - tornado.access - INFO - 200 POST /loginwx (223.91.51.204) 16.00ms
+2018-09-02 15:33:13,517 - tornado.access - INFO - 200 POST /loginwx (223.91.51.204) 0.00ms
+2018-09-02 15:38:09,961 - tornado.access - INFO - 200 POST /loginwx (223.91.51.204) 16.00ms
+2018-09-02 15:38:20,885 - tornado.access - INFO - 200 POST /loginwx (223.91.51.204) 16.00ms
+2018-09-02 15:41:37,891 - tornado.access - INFO - 200 POST /loginwx (223.91.51.204) 16.00ms
+2018-09-02 15:42:17,134 - tornado.access - INFO - 200 POST /loginwx (223.91.51.204) 16.00ms
+2018-09-02 15:44:46,395 - tornado.access - INFO - 200 POST /loginwx (223.91.51.204) 16.00ms
+2018-09-02 15:45:51,723 - tornado.access - INFO - 200 POST /loginwx (117.158.83.73) 0.00ms
+2018-09-02 15:47:40,176 - tornado.access - INFO - 200 POST /loginwx (223.91.51.204) 15.00ms
+2018-09-02 15:50:44,079 - tornado.access - INFO - 200 POST /loginwx (115.51.8.68) 15.00ms
+2018-09-02 15:51:14,118 - tornado.access - INFO - 200 POST /loginwx (223.91.51.204) 16.00ms
+2018-09-02 15:52:59,055 - tornado.access - INFO - 200 POST /loginwx (223.91.51.204) 31.00ms
+2018-09-02 15:54:40,392 - tornado.access - INFO - 200 POST /loginwx (223.91.51.204) 15.00ms
+2018-09-02 15:55:42,816 - tornado.access - INFO - 200 POST /loginwx (115.51.8.68) 15.00ms
+2018-09-02 15:58:22,618 - tornado.access - INFO - 200 POST /loginwx (115.51.8.68) 15.00ms
+2018-09-02 16:03:50,680 - tornado.access - INFO - 200 POST /loginwx (115.51.8.68) 15.00ms
+2018-09-02 16:05:43,737 - tornado.access - INFO - 200 POST /loginwx (115.51.8.68) 16.00ms
+2018-09-02 16:16:18,221 - tornado.access - INFO - 200 POST /loginwx (223.91.51.204) 15.00ms
+2018-09-02 16:28:03,191 - tornado.access - INFO - 200 POST /loginwx (223.91.51.204) 15.00ms
+2018-09-02 16:32:09,799 - tornado.access - INFO - 200 POST /loginwx (223.91.51.204) 16.00ms
+2018-09-02 16:39:04,013 - tornado.access - INFO - 200 POST /loginwx (223.91.51.204) 16.00ms
+2018-09-02 16:40:54,773 - tornado.access - INFO - 200 POST /loginwx (223.91.51.204) 16.00ms
+2018-09-02 16:43:20,404 - tornado.access - INFO - 200 POST /loginwx (115.51.8.68) 0.00ms
+2018-09-02 16:43:50,088 - tornado.access - INFO - 200 POST /loginwx (223.91.51.204) 16.00ms
+2018-09-02 16:54:29,259 - tornado.access - INFO - 200 POST /loginwx (115.51.8.68) 15.00ms
+2018-09-02 17:00:06,989 - tornado.access - INFO - 200 POST /loginwx (117.158.83.73) 15.00ms
+2018-09-02 17:02:38,150 - tornado.access - INFO - 200 POST /loginwx (115.51.8.68) 16.00ms
+2018-09-02 17:04:53,194 - tornado.access - INFO - 200 POST /loginwx (117.158.83.73) 15.00ms
+2018-09-02 18:40:10,664 - tornado.access - INFO - 200 POST /loginwx (117.158.83.73) 16.00ms
+2018-09-02 18:42:16,101 - tornado.access - INFO - 200 POST /loginwx (117.158.83.73) 17.00ms
+2018-09-02 18:46:19,638 - tornado.access - INFO - 200 POST /loginwx (117.158.83.73) 15.00ms
+2018-09-02 18:49:44,621 - tornado.access - INFO - 200 POST /loginwx (117.158.83.73) 31.00ms
+2018-09-02 19:26:32,400 - tornado.access - INFO - 200 POST /loginwx (117.158.83.73) 16.00ms
+2018-09-02 19:28:20,828 - tornado.access - INFO - 200 POST /loginwx (117.158.83.73) 16.00ms
+2018-09-02 19:31:28,283 - tornado.access - INFO - 200 POST /loginwx (117.158.83.73) 15.00ms
+2018-09-02 19:31:45,703 - tornado.access - INFO - 200 POST /loginwx (117.158.83.73) 16.00ms
+2018-09-02 20:03:55,657 - tornado.access - INFO - 200 POST /loginwx (115.51.8.68) 16.00ms
+2018-09-02 20:07:11,332 - tornado.access - INFO - 200 POST /loginwx (115.51.8.68) 16.00ms
+2018-09-02 20:15:35,786 - tornado.access - INFO - 200 POST /loginwx (115.51.8.68) 15.00ms
+2018-09-02 20:18:23,026 - tornado.access - INFO - 200 POST /loginwx (115.51.8.68) 15.00ms
+2018-09-02 20:23:01,253 - tornado.access - INFO - 200 POST /loginwx (115.51.8.68) 16.00ms
+2018-09-02 20:52:13,990 - tornado.access - INFO - 200 POST /loginwx (115.51.8.68) 15.00ms
+2018-09-02 20:54:14,329 - tornado.access - INFO - 200 POST /loginwx (115.51.8.68) 15.00ms
+2018-09-02 20:54:15,269 - tornado.access - INFO - 200 POST /loginwx (117.158.83.73) 0.00ms
+2018-09-02 20:56:09,128 - tornado.access - INFO - 200 POST /loginwx (115.51.8.68) 16.00ms
+2018-09-02 20:57:30,305 - tornado.access - INFO - 200 POST /loginwx (117.158.83.73) 15.00ms
+2018-09-02 21:16:35,072 - tornado.access - INFO - 200 POST /loginwx (117.158.83.73) 16.00ms
+2018-09-02 21:16:46,526 - tornado.access - INFO - 200 POST /loginwx (115.51.8.68) 16.00ms
+2018-09-02 21:18:00,601 - tornado.access - INFO - 200 POST /loginwx (115.51.8.68) 15.00ms
+2018-09-02 21:19:22,000 - tornado.access - INFO - 200 POST /loginwx (117.158.83.73) 16.00ms
+2018-09-02 21:21:15,785 - tornado.access - INFO - 200 POST /loginwx (115.51.8.68) 15.00ms
+2018-09-02 21:26:15,194 - tornado.access - INFO - 200 POST /loginwx (115.51.8.68) 15.00ms
+2018-09-02 21:28:41,299 - tornado.access - INFO - 200 POST /loginwx (115.51.8.68) 15.00ms
+2018-09-02 21:29:57,576 - tornado.access - INFO - 200 POST /loginwx (115.51.8.68) 0.00ms
+2018-09-02 21:31:52,200 - tornado.access - INFO - 200 POST /loginwx (115.51.8.68) 15.00ms
+2018-09-02 21:36:37,535 - tornado.access - INFO - 200 POST /loginwx (115.51.8.68) 16.00ms
+2018-09-02 21:39:45,838 - tornado.access - INFO - 200 POST /loginwx (115.51.8.68) 16.00ms
+2018-09-02 21:40:42,114 - tornado.access - INFO - 200 POST /loginwx (115.51.8.68) 16.00ms
+2018-09-02 21:41:37,897 - tornado.access - INFO - 200 POST /loginwx (115.51.8.68) 15.00ms
+2018-09-02 21:43:07,980 - tornado.access - INFO - 200 POST /loginwx (115.51.8.68) 15.00ms
+2018-09-02 22:09:07,180 - tornado.access - INFO - 200 POST /loginwx (115.51.8.68) 15.00ms
+2018-09-02 22:10:45,801 - tornado.access - INFO - 200 POST /loginwx (115.51.8.68) 16.00ms
+2018-09-02 22:18:51,842 - tornado.access - INFO - 200 POST /loginwx (58.33.129.88) 16.00ms
+2018-09-02 22:21:52,069 - tornado.access - INFO - 200 POST /loginwx (58.33.129.88) 16.00ms
+2018-09-02 22:23:14,309 - tornado.access - INFO - 200 POST /loginwx (58.33.129.88) 16.00ms
+2018-09-02 22:23:20,117 - tornado.access - INFO - 200 POST /loginwx (58.33.129.88) 16.00ms
+2018-09-02 22:23:41,937 - tornado.access - INFO - 200 POST /loginwx (58.33.129.88) 16.00ms
+2018-09-02 22:24:44,377 - tornado.access - INFO - 200 POST /loginwx (58.33.129.88) 16.00ms
+2018-09-02 22:27:59,663 - tornado.access - INFO - 200 POST /loginwx (58.33.129.88) 16.00ms
+2018-09-03 09:36:22,000 - tornado.access - INFO - 200 POST /loginwx (117.158.83.73) 47.00ms
+2018-09-03 09:39:43,887 - tornado.access - INFO - 200 POST /loginwx (117.158.83.73) 15.00ms
+2018-09-03 09:41:55,592 - tornado.access - INFO - 200 POST /loginwx (117.158.83.73) 15.00ms
+2018-09-03 09:42:35,650 - tornado.access - INFO - 200 POST /loginwx (117.158.83.73) 16.00ms
+2018-09-03 10:00:17,301 - tornado.access - INFO - 200 POST /loginwx (117.158.83.73) 16.00ms
+2018-09-03 10:02:35,864 - tornado.access - INFO - 200 POST /loginwx (117.158.83.73) 16.00ms
+2018-09-03 10:05:00,658 - tornado.access - INFO - 200 POST /loginwx (117.158.83.73) 15.00ms
+2018-09-03 10:12:02,125 - tornado.access - INFO - 200 POST /loginwx (117.158.83.73) 31.00ms
+2018-09-03 10:13:24,571 - tornado.access - INFO - 200 POST /loginwx (117.158.83.73) 15.00ms
+2018-09-03 10:16:53,573 - tornado.access - INFO - 200 POST /loginwx (117.158.83.73) 31.00ms
+2018-09-03 10:21:07,539 - tornado.access - INFO - 200 POST /loginwx (117.158.83.73) 16.00ms
+2018-09-03 10:43:05,772 - tornado.access - INFO - 200 POST /loginwx (117.158.83.73) 15.00ms
+2018-09-03 11:00:54,032 - tornado.access - INFO - 200 POST /loginwx (117.158.83.73) 16.00ms
+2018-09-03 11:02:09,480 - tornado.access - INFO - 200 POST /loginwx (117.158.83.73) 62.00ms
+2018-09-03 11:05:01,555 - tornado.access - INFO - 200 POST /loginwx (117.158.83.73) 16.00ms
+2018-09-03 11:09:27,246 - tornado.access - INFO - 200 POST /loginwx (117.158.83.73) 15.00ms
+2018-09-03 11:13:24,793 - tornado.access - INFO - 200 POST /loginwx (117.158.83.73) 16.00ms
+2018-09-03 12:33:57,579 - tornado.access - INFO - 200 POST /loginwx (117.158.83.73) 15.00ms
+2018-09-03 12:36:25,506 - tornado.access - INFO - 200 POST /loginwx (117.158.83.73) 15.00ms
+2018-09-03 12:36:31,973 - tornado.access - INFO - 200 POST /loginwx (117.158.83.73) 31.00ms
+2018-09-03 12:38:23,654 - tornado.access - INFO - 200 POST /loginwx (117.158.83.73) 16.00ms
+2018-09-03 12:40:13,724 - tornado.access - INFO - 200 POST /loginwx (117.158.83.73) 16.00ms
+2018-09-03 12:43:36,019 - tornado.access - INFO - 200 POST /loginwx (117.158.83.73) 15.00ms
+2018-09-03 12:44:35,532 - tornado.access - INFO - 200 POST /loginwx (117.158.83.73) 16.00ms
+2018-09-03 12:47:59,427 - tornado.access - INFO - 200 POST /loginwx (117.158.83.73) 15.00ms
+2018-09-03 12:52:23,428 - tornado.access - INFO - 200 POST /loginwx (117.158.83.73) 16.00ms
+2018-09-03 12:53:13,305 - tornado.access - INFO - 200 POST /loginwx (117.158.83.73) 16.00ms
+2018-09-03 12:57:40,861 - tornado.access - INFO - 200 POST /loginwx (117.158.83.73) 15.00ms
+2018-09-03 12:59:13,588 - tornado.access - INFO - 200 POST /loginwx (117.158.83.73) 15.00ms
+2018-09-03 13:00:32,165 - tornado.access - INFO - 200 POST /loginwx (117.158.83.73) 16.00ms
+2018-09-03 13:00:54,933 - tornado.access - INFO - 200 POST /loginwx (117.158.83.73) 31.00ms
+2018-09-03 13:01:32,783 - tornado.access - INFO - 200 POST /loginwx (117.158.83.73) 16.00ms
+2018-09-03 13:01:41,608 - tornado.access - INFO - 200 POST /loginwx (117.158.83.73) 15.00ms
+2018-09-03 13:03:06,262 - tornado.access - INFO - 200 POST /loginwx (117.158.83.73) 16.00ms
+2018-09-03 13:04:07,944 - tornado.access - INFO - 200 POST /loginwx (117.158.83.73) 15.00ms
+2018-09-03 13:05:58,900 - tornado.access - INFO - 200 POST /loginwx (117.158.83.73) 15.00ms
+2018-09-03 13:07:29,717 - tornado.access - INFO - 200 POST /loginwx (117.158.83.73) 0.00ms
+2018-09-03 13:08:20,776 - tornado.access - INFO - 200 POST /loginwx (117.158.83.73) 16.00ms
+2018-09-03 13:12:05,946 - tornado.access - INFO - 200 POST /loginwx (117.158.83.73) 16.00ms
+2018-09-03 13:15:37,026 - tornado.access - INFO - 200 POST /loginwx (117.158.83.73) 15.00ms
+2018-09-03 13:21:38,453 - tornado.access - INFO - 200 POST /loginwx (117.158.83.73) 16.00ms
+2018-09-03 13:24:12,779 - tornado.access - INFO - 200 POST /loginwx (117.158.83.73) 16.00ms
+2018-09-03 13:25:05,005 - tornado.access - INFO - 200 POST /loginwx (117.158.83.73) 16.00ms
+2018-09-03 13:37:44,161 - tornado.access - INFO - 200 POST /loginwx (117.158.83.73) 15.00ms
+2018-09-03 13:43:17,723 - tornado.access - INFO - 200 POST /loginwx (117.158.83.73) 15.00ms
+2018-09-03 13:46:14,164 - tornado.access - INFO - 200 POST /loginwx (117.158.83.73) 0.00ms
+2018-09-03 13:50:59,905 - tornado.access - INFO - 200 POST /loginwx (117.158.83.73) 15.00ms
+2018-09-03 13:54:55,755 - tornado.general - WARNING - SSL Error on 620 ('117.158.83.73', 51760): [SSL: HTTP_REQUEST] http request (_ssl.c:661)
+2018-09-03 13:55:04,783 - tornado.general - WARNING - SSL Error on 620 ('117.158.83.73', 51761): [SSL: HTTP_REQUEST] http request (_ssl.c:661)
+2018-09-03 13:55:05,003 - tornado.general - WARNING - SSL Error on 620 ('117.158.83.73', 51763): [SSL: HTTP_REQUEST] http request (_ssl.c:661)
+2018-09-03 13:55:10,575 - tornado.general - WARNING - SSL Error on 620 ('117.158.83.73', 51765): [SSL: HTTP_REQUEST] http request (_ssl.c:661)
+2018-09-03 13:56:26,884 - tornado.general - WARNING - SSL Error on 620 ('117.158.83.73', 51797): [SSL: HTTP_REQUEST] http request (_ssl.c:661)
+2018-09-03 13:57:39,313 - tornado.general - WARNING - SSL Error on 740 ('117.158.83.73', 51919): [SSL: HTTP_REQUEST] http request (_ssl.c:661)
+2018-09-03 13:58:23,869 - tornado.general - WARNING - SSL Error on 796 ('117.158.83.73', 49490): [SSL: HTTP_REQUEST] http request (_ssl.c:661)
+2018-09-03 13:58:32,446 - tornado.general - WARNING - SSL Error on 796 ('117.158.83.73', 49508): [SSL: HTTP_REQUEST] http request (_ssl.c:661)
+2018-09-03 14:05:57,674 - tornado.access - INFO - 200 POST /loginwx (117.158.83.73) 15.00ms
+2018-09-03 14:08:41,520 - tornado.access - INFO - 200 POST /loginwx (117.158.83.73) 16.00ms
+2018-09-03 14:09:38,023 - tornado.access - INFO - 200 POST /loginwx (117.158.83.73) 15.00ms
+2018-09-03 14:09:47,631 - tornado.access - INFO - 200 POST /loginwx (117.158.83.73) 16.00ms
+2018-09-03 14:24:46,329 - tornado.access - INFO - 200 POST /loginwx (117.158.83.73) 16.00ms
+2018-09-03 14:29:32,224 - tornado.access - INFO - 200 POST /loginwx (117.158.83.73) 31.00ms
+2018-09-03 14:33:32,450 - tornado.access - INFO - 200 POST /loginwx (117.158.83.73) 16.00ms
+2018-09-03 15:38:25,000 - tornado.access - INFO - 200 POST /loginwx (117.158.83.73) 16.00ms
+2018-09-03 15:59:43,760 - tornado.general - WARNING - SSL Error on 624 ('117.158.83.73', 51394): [SSL: HTTP_REQUEST] http request (_ssl.c:661)
+2018-09-03 16:00:01,667 - tornado.general - WARNING - SSL Error on 624 ('117.158.83.73', 51424): [SSL: HTTP_REQUEST] http request (_ssl.c:661)
+2018-09-03 16:00:12,539 - tornado.general - WARNING - SSL Error on 624 ('117.158.83.73', 51444): [SSL: HTTP_REQUEST] http request (_ssl.c:661)
+2018-09-03 16:00:23,206 - tornado.general - WARNING - SSL Error on 624 ('117.158.83.73', 51461): [SSL: HTTP_REQUEST] http request (_ssl.c:661)
+2018-09-03 16:00:33,671 - tornado.general - WARNING - SSL Error on 624 ('117.158.83.73', 51479): [SSL: HTTP_REQUEST] http request (_ssl.c:661)
+2018-09-03 16:00:48,536 - tornado.general - WARNING - SSL Error on 624 ('117.158.83.73', 51507): [SSL: HTTP_REQUEST] http request (_ssl.c:661)
+2018-09-03 16:01:04,622 - tornado.general - WARNING - SSL Error on 624 ('117.158.83.73', 51531): [SSL: HTTP_REQUEST] http request (_ssl.c:661)
+2018-09-03 16:01:16,187 - tornado.general - WARNING - SSL Error on 624 ('117.158.83.73', 51559): [SSL: HTTP_REQUEST] http request (_ssl.c:661)
+2018-09-03 16:01:27,062 - tornado.general - WARNING - SSL Error on 624 ('117.158.83.73', 51581): [SSL: HTTP_REQUEST] http request (_ssl.c:661)
+2018-09-03 16:01:34,806 - tornado.general - WARNING - SSL Error on 624 ('117.158.83.73', 51594): [SSL: HTTP_REQUEST] http request (_ssl.c:661)
+2018-09-03 16:02:01,266 - tornado.general - WARNING - SSL Error on 624 ('117.158.83.73', 51636): [SSL: HTTP_REQUEST] http request (_ssl.c:661)
+2018-09-03 16:03:22,539 - tornado.general - WARNING - SSL Error on 624 ('117.158.83.73', 51772): [SSL: HTTP_REQUEST] http request (_ssl.c:661)
+2018-09-03 16:03:30,895 - tornado.general - WARNING - SSL Error on 624 ('117.158.83.73', 51788): [SSL: HTTP_REQUEST] http request (_ssl.c:661)
+2018-09-03 16:21:02,377 - tornado.general - WARNING - SSL Error on 624 ('117.158.83.73', 56199): [SSL: HTTP_REQUEST] http request (_ssl.c:661)
+2018-09-03 16:31:35,313 - tornado.general - WARNING - SSL Error on 624 ('117.158.83.73', 57256): [SSL: HTTP_REQUEST] http request (_ssl.c:661)
+2018-09-03 16:31:52,994 - tornado.general - WARNING - SSL Error on 624 ('117.158.83.73', 57284): [SSL: HTTP_REQUEST] http request (_ssl.c:661)
+2018-09-03 16:32:07,407 - tornado.general - WARNING - SSL Error on 624 ('117.158.83.73', 57307): [SSL: HTTP_REQUEST] http request (_ssl.c:661)
+2018-09-03 16:55:11,184 - tornado.general - WARNING - SSL Error on 624 ('117.158.83.73', 57761): [SSL: HTTP_REQUEST] http request (_ssl.c:661)
+2018-09-03 16:55:52,940 - tornado.general - WARNING - SSL Error on 624 ('117.158.83.73', 57767): [SSL: HTTP_REQUEST] http request (_ssl.c:661)
+2018-09-03 16:57:22,568 - tornado.general - WARNING - SSL Error on 624 ('117.158.83.73', 57785): [SSL: HTTP_REQUEST] http request (_ssl.c:661)
+2018-09-03 17:26:24,127 - tornado.access - INFO - 200 POST /loginwx (117.158.83.73) 16.00ms
+2018-09-03 17:28:24,898 - tornado.access - INFO - 200 POST /loginwx (117.158.83.73) 15.00ms
+2018-09-03 17:28:59,233 - tornado.access - INFO - 200 POST /loginwx (117.158.83.73) 15.00ms
+2018-09-03 17:31:03,802 - tornado.access - INFO - 200 POST /loginwx (117.158.83.73) 16.00ms
+2018-09-03 17:32:06,657 - tornado.access - INFO - 200 POST /loginwx (117.158.83.73) 15.00ms
+2018-09-03 17:33:46,520 - tornado.access - INFO - 200 POST /loginwx (117.158.83.73) 16.00ms
+2018-09-03 17:36:44,885 - tornado.access - INFO - 200 POST /loginwx (117.158.83.73) 16.00ms
+2018-09-03 20:23:39,973 - tornado.access - INFO - 200 POST /loginwx (223.91.51.205) 16.00ms
+2018-09-03 20:40:57,270 - tornado.access - INFO - 200 POST /loginwx (117.158.83.73) 16.00ms
+2018-09-03 21:45:51,108 - tornado.access - INFO - 200 POST /loginwx (58.33.129.88) 15.00ms
+2018-09-03 21:46:00,016 - tornado.access - INFO - 200 POST /loginwx (58.33.129.88) 16.00ms
+2018-09-03 21:46:44,813 - tornado.access - INFO - 200 POST /palyend (58.33.129.88) 15.00ms
+2018-09-03 21:50:06,766 - tornado.access - INFO - 200 POST /loginwx (58.33.129.88) 16.00ms
+2018-09-03 21:55:39,190 - tornado.access - INFO - 200 POST /loginwx (117.158.83.73) 16.00ms
+2018-09-03 21:56:52,025 - tornado.access - INFO - 200 POST /loginwx (117.158.83.73) 15.00ms
+2018-09-03 21:57:40,806 - tornado.access - INFO - 200 POST /loginwx (58.33.129.88) 16.00ms
+2018-09-03 21:58:07,223 - tornado.access - INFO - 200 POST /loginwx (117.158.83.73) 15.00ms
+2018-09-03 22:01:15,757 - tornado.access - INFO - 200 POST /loginwx (117.158.83.73) 32.00ms
+2018-09-03 22:01:19,747 - tornado.access - INFO - 200 POST /loginwx (117.158.83.73) 16.00ms
+2018-09-03 22:02:37,155 - tornado.access - INFO - 200 POST /loginwx (117.158.83.73) 16.00ms
+2018-09-03 23:28:50,539 - tornado.access - INFO - 200 POST /loginwx (58.33.129.88) 15.00ms
+2018-09-03 23:29:06,878 - tornado.access - INFO - 200 POST /loginwx (58.33.129.88) 15.00ms
+2018-09-03 23:29:33,029 - tornado.access - INFO - 200 POST /loginwx (58.33.129.88) 16.00ms
+2018-09-03 23:55:46,301 - tornado.access - INFO - 200 POST /loginwx (58.33.129.88) 16.00ms
+2018-09-03 23:56:44,802 - tornado.access - INFO - 200 POST /loginwx (58.33.129.88) 16.00ms
+2018-09-03 23:57:45,601 - tornado.access - INFO - 200 POST /loginwx (58.33.129.88) 15.00ms
+2018-09-03 23:58:06,104 - tornado.access - INFO - 200 POST /palybegin (58.33.129.88) 16.00ms
+2018-09-03 23:58:11,628 - tornado.access - INFO - 200 POST /palyend (58.33.129.88) 0.00ms
+2018-09-03 23:58:12,943 - tornado.access - INFO - 200 POST /palybegin (58.33.129.88) 16.00ms

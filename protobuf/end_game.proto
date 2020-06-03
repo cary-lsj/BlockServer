@@ -1,0 +1,31 @@
+package gameMsg;
+
+message RankEndGameData
+{
+  required string sGamerID = 1;//玩家ID
+  required int32 nRank = 2;//玩家排行
+  required int32 nTime = 3;//玩家用时
+  required int32 nGold = 4;//玩家游戏币
+  required int32 nLevel = 5;//玩家段位，青铜白银黄金。。。
+}
+
+message EndGameRequest {//完成对战请求协议
+  required string sID = 1;//用户ID
+  required string sRoomID = 2;//房间ID
+}
+
+message EndGameResponse {//完成对战响应协议
+  required string sGamerID = 1;//玩家ID
+  required int32 nRank = 2;//玩家排名
+}
+
+
+message EndGameNotify {//结束游戏通知协议
+  required string sRoomID = 1;//房间ID
+  repeated RankEndGameData rankEndGameDatas = 2;
+}
+
+message OverTimeNotify {//超时通知协议
+  required string sGamerID = 1;//玩家ID
+  required int32 nRank = 2;//玩家排名
+}
