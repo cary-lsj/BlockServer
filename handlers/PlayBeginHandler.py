@@ -15,22 +15,24 @@ from protobuf import play_begin_pb2, msg_pb2
 
 class PlayBeginHandler(BaseHandler):
     def post(self):
-        # msgReq = msg_pb2.Msg()
-        # msgReq.ParseFromString(self.request.body)
-        #
-        # msgResp = msg_pb2.Msg()
-        # msgResp.type = msg_pb2.EnumMsg.Value('playbeginresponse')
-        #
-        # request = msgReq.request.playBeginRequest
-        # response = msgResp.response.playBeginResponse
+
+        return
+
+        msgReq = msg_pb2.Msg()
+        msgReq.ParseFromString(self.request.body)
+
+        msgResp = msg_pb2.Msg()
+        msgResp.type = msg_pb2.EnumMsg.Value('playbeginresponse')
+
+        request = msgReq.request.playBeginRequest
+        response = msgResp.response.playBeginResponse
 
 
-        resp = {}
-        resp['nErrorCode'] = config_error['success']
+        msgResp.nErrorCode = config_error['success']
 
         req = json.loads(self.request.body)
-        uid = req["request"]["sID"]
-        gateID = req["request"]["gateID"]
+        uid = request.sID
+        gateID = request.gateID
 
         user = Dal_User().getUser(uid)
         if user == None:

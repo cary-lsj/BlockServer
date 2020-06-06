@@ -7,8 +7,11 @@ from handlers.UsePromptHandler import UsePromptHandler
 from handlers.SeeADHandler import SeeADHandler
 from handlers.RankHandler import RankHandler
 from handlers.buyHandler import BuyHandler
+from handlers.loginHandler import LoginHandler
+from handlers.clientLogHandler import ClientLogHandler
 
 urls = [
+    (r"/login", LoginHandler),
     (r"/loginwx", LoginWXHandler),
     (r"/palybegin", PlayBeginHandler),
     (r"/palyend", PlayEndHandler),
@@ -16,5 +19,6 @@ urls = [
     (r"/seead", SeeADHandler),
     (r"/rank", RankHandler),
     (r"/game",GameHandler),
-    (r"/buy",BuyHandler)
+    (r"/buy",BuyHandler),
+    (r"/log",ClientLogHandler)
 ]

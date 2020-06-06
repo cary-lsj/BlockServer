@@ -19,6 +19,10 @@ loggers:
     handlers: [ingenia]
     propagate: false  # We dont want ingenia logs going everywhere
     qualname: ingenia
+  newuser:
+    handlers: [newuser]
+    propagate: false  # We dont want ingenia logs going everywhere
+    qualname: newuser
   tornado:
     handlers: [all]
     propagate: false
@@ -50,6 +54,13 @@ handlers:
     when: W0
     backupCount: 4
     filename: log/ingenia.log
+  newuser:
+    class: logging.handlers.TimedRotatingFileHandler
+    level: DEBUG
+    formatter: simple
+    when: W0
+    backupCount: 4
+    filename: log/newuser.log
 
 root:
   level: INFO

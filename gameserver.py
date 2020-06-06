@@ -22,7 +22,7 @@ from dal.dal_user import Dal_User
 from tools.utils import Utils
 from utest.utest import UTest
 
-define("port", default=8001, help="run on the given port", type=int)
+define("port", default=8080, help="run on the given port", type=int)
 
 def initLog():
     #logging.config.fileConfig('configs/logging.conf')
@@ -43,13 +43,13 @@ def UnitTest():
 
 def main():
     print (options.help)
-    print "Quit the server with CONTROL-C "
+    # print "Quit the server with CONTROL-C "
     tornado.options.parse_command_line()
-    http_server=tornado.httpserver.HTTPServer(webapplication)
-    # http_server = tornado.httpserver.HTTPServer(webapplication, ssl_options={
-    #    "certfile": os.path.join(os.path.abspath("."), "server.crt"),
-    #    "keyfile": os.path.join(os.path.abspath("."), "server.key"),
-    # })
+    # http_server=tornado.httpserver.HTTPServer(webapplication)
+    http_server = tornado.httpserver.HTTPServer(webapplication, ssl_options={
+       "certfile": os.path.join(os.path.abspath("."), "www.cxagile.cn.crt"),
+       "keyfile": os.path.join(os.path.abspath("."), "www.cxagile.cn.key"),
+    })
 
     http_server.listen(options.port)
     tornado.ioloop.IOLoop.instance().start()

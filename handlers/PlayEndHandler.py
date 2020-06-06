@@ -25,6 +25,8 @@ class PlayEndHandler(BaseHandler):
         # request = msgReq.request.playEndRequest
         # response = msgResp.response.playEndResponse
 
+        return
+
         resp = {}
         resp['nErrorCode'] = config_error['success']
 

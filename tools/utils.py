@@ -89,8 +89,8 @@ class Utils:
         return count
 
     def logDebug(self,msg):
-       return False
-       loger= logging.getLogger("ingenia")
+       # return False
+       loger= logging.getLogger("newuser")
        loger.info(msg)
 
     def logMainDebug(self, msg):
