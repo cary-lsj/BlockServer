@@ -19,8 +19,10 @@ class ClientLogHandler(BaseHandler):
         Utils().logMainDebug(log)
         return
     def get(self):
-        loger = logging.getLogger("ingenia")
-        self.write("test")
+        file = open('log/ingenia.log', 'r')
+        txt = file.read()
+        txt = txt.replace("\n","<br>")
+        self.write(txt)
 
 
 
