@@ -18,9 +18,9 @@ from tools.utils import Utils
 from handlers.BaseHandler import BaseHandler
 from protobuf import msg_pb2
 
+
 class LoginWXHandler(BaseHandler):
     def post(self):
-
         req = self.request.arguments
         code = req['code'][0]
         appid = "1110505951"

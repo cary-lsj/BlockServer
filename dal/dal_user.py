@@ -15,6 +15,7 @@ class Dal_User(Dal_base):
     def __init__(self):
         Dal_base.__init__(self)
         self.m_rankCache = []
+        self.m_GameTimeCache = dict()
 
     ##增
     def addUser(self,newUser):

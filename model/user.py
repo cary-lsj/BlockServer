@@ -21,3 +21,14 @@ class User(Model):
     gold = IntegerField('gold', True)
     money = IntegerField('money', True)
     goods = StringField('goods', True)
+    tipstime = StringField('tipstime', True)  # 提示的时间
+    ads = IntegerField('ads', True)  # 看视频广告次数
+    adtime = StringField('adtime', True)  # 看视频广告时间
+    shares = IntegerField('shares', True)  # 分享的次数
+    sharetime = StringField('sharetime', True)  # 分享的时间
+    popadds = IntegerField('popadds', True)  # 看弹出式广告次数
+    popaddtime = StringField('popaddtime', True)  # 弹出式广告时间
+
+    def getCanSeeVideoAD(self):
+        if adtime == None:
+            return True

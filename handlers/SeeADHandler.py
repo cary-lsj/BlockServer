@@ -37,9 +37,9 @@ class SeeADHandler(BaseHandler):
             user.tips = user.tips + 1
             kwargs = {"tips": user.tips}
             Dal_User().uqdateUser(user.id, **kwargs)
-            resp['nPrompt'] =  user.tips
+            resp['nPrompt'] = user.tips
 
-        msg={}
+        msg = {}
         msg["type"] = config_game['msgType']['seeadresponse']
         msg["response"] = resp
         resp = json.dumps(msg)

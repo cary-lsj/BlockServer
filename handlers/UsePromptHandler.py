@@ -33,12 +33,12 @@ class UsePromptHandler(BaseHandler):
         user = Dal_User().getUser(uid)
         if user == None:
             resp['nErrorCode'] = config_error['userinvaild']
-        elif user.tips==0:
+        elif user.tips == 0:
             resp['nErrorCode'] = config_error['ptomptnone']
         else:
-            user.dtips = user.dtips + 1#每次开始，临时的提示数据清空，结束的时候写入数据库
+            user.dtips = user.dtips + 1  # 每次开始，临时的提示数据清空，结束的时候写入数据库
 
-        msg={}
+        msg = {}
         msg["type"] = config_game['msgType']['usepromptresponse']
         msg["response"] = resp
         resp = json.dumps(msg)

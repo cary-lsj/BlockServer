@@ -18,6 +18,10 @@ message LoginRequest {//登录请求协议
   required string sID = 1;//用户ID
   optional string sNick = 2;//用户昵称
   optional string sHeadimg = 3;//用户头像
+  optional string sCity = 4;//城市
+  optional int32 nGender = 5;//性别
+  optional string sProvince = 6;//省份
+  optional string sCountry = 7;//国家
 }
 
 message LoginResponse {//登录响应协议
@@ -27,5 +31,9 @@ message LoginResponse {//登录响应协议
   optional int32 nGold = 4;//用户游戏币
   optional int32 nTotalStar = 5;//用户总星级
   optional int32 nTotalGate = 6;//总关数
+  optional int32 nServerTime = 7;//服务器时间
+  optional bool bSeeAd = 8;//可以看广告
+  optional bool bShare = 9;//可以分享
+  optional bool bGetTips = 10;//可以获取提示
 }
 

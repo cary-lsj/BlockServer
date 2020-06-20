@@ -18,8 +18,10 @@ from handlers.BaseHandler import BaseHandler
 from protobuf import msg_pb2
 
 import sys
+
 reload(sys)
 sys.setdefaultencoding("utf8")
+
 
 class LoginHandler(BaseHandler):
     def post(self):
@@ -34,31 +36,36 @@ class LoginHandler(BaseHandler):
         uid = request.sID
         nick = request.sNick
         headimg = request.sHeadimg
+        gender = request.nGender
+        country = request.sCountry
+        province = request.sProvince
+        city = request.sCity
 
         user = Dal_User().getUser(uid)
         if user == None:
-            Utils().logDebug("创建新用户:"+str(nick)+" ; openid:"+str(uid))
-            #新用户默认第一关解锁
+            Utils().logDebug("创建新用户:" + str(nick) + " ; openid:" + str(uid))
+            # 新用户默认第一关解锁
             newgate = Gateinfo(gid=1, uid=uid, gatestar=0, state=1)
             gid = Dal_Gateinfo().addGateinfo(newgate)
-
+            nowtime = int(time.time())
             user = User(id=uid, nickname=nick, headimgurl=headimg, \
-                    tips =0,gates = str(gid),sex=0,city="",country="",province="", \
-                        unionid="",dtips=0,ranklevel=0,gold=0,money=0,goods="")
+                        tips=0, gates=str(gid), sex=gender, city=city, country=country, province=province, \
+                        unionid="", dtips=0, ranklevel=0, gold=0, money=0, goods="", tipstime=nowtime, ads=0, \
+                        adtime=nowtime, shares=0, sharetime=nowtime,popadds=0, popaddtime=nowtime)
             Dal_User().addUser(user)
 
         if nick != "" and nick != user.nickname:
             user.nickname = nick
-            kwargs = {"nick": user.nickname}
+            kwargs = {"nickname": user.nickname}
             Dal_User().uqdateUser(user.id, **kwargs)
 
         if headimg != "" and headimg != user.headimgurl:
             user.headimgurl = headimg
-            kwargs = {"headimg": headimg}
+            kwargs = {"headimgurl": headimg}
             Dal_User().uqdateUser(user.id, **kwargs)
 
         gates = Dal_User().getUserGates(user.id)
-        for index,id in enumerate(gates):
+        for index, id in enumerate(gates):
             gate = resp.gates.add()
             gateinfo = Dal_Gateinfo().getGateinfo(id)
             gate.id = gateinfo.gid
@@ -66,6 +73,7 @@ class LoginHandler(BaseHandler):
 
         resp.nTotalStar = Dal_User().getUserTopGateStar(user.id)
         resp.nTotalGate = config_game['maxGate']
+        resp.nServerTime = int(time.time())
 
         msgResp.response.nErrorCode = config_error['success']
         data = msgResp.SerializeToString()

@@ -1,4 +1,4 @@
-#coding:utf-8
+# coding:utf-8
 
 import json
 import tornado.web
@@ -13,16 +13,15 @@ from tools.utils import Utils
 from handlers.BaseHandler import BaseHandler
 from protobuf import msg_pb2
 
+
 class ClientLogHandler(BaseHandler):
     def post(self):
         log = self.request.body
         Utils().logMainDebug(log)
         return
+
     def get(self):
         file = open('log/ingenia.log', 'r')
         txt = file.read()
-        txt = txt.replace("\n","<br>")
+        txt = txt.replace("\n", "<br>")
         self.write(txt)
-
-
-

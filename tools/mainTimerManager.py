@@ -48,16 +48,16 @@ class MainTimerManager:
             id = str(id)
             job = self.getTimer(id)
             if job:job.stop()
-        except Exception, e:
-            print str(Exception)
+        except Exception as e:
+            print (str(Exception))
 
     def resumeTimer(self, id):  ##暂停
         try:
             id = str(id)
             job = self.getTimer(id)
             if job:job.start()
-        except Exception, e:
-            print str(Exception)
+        except Exception as e:
+            print (str(Exception))
 
     def pauseAllTimer(self):  ##
         for k,v in self.m_scheduler.iteritems():

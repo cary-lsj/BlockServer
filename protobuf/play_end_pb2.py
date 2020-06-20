@@ -13,14 +13,16 @@ from google.protobuf import descriptor_pb2
 _sym_db = _symbol_database.Default()
 
 
+import login_pb2 as login__pb2
 
 
 DESCRIPTOR = _descriptor.FileDescriptor(
   name='play_end.proto',
   package='gameMsg',
   syntax='proto2',
-  serialized_pb=_b('\n\x0eplay_end.proto\x12\x07gameMsg\"-\n\x0ePlayEndRequest\x12\x0b\n\x03sID\x18\x01 \x02(\t\x12\x0e\n\x06gateID\x18\x02 \x02(\x05\"G\n\x0fPlayEndResponse\x12\x0e\n\x06gateID\x18\x01 \x02(\x05\x12\x10\n\x08nTopStar\x18\x02 \x01(\x05\x12\x12\n\nnTotalStar\x18\x03 \x01(\x05')
-)
+  serialized_pb=_b('\n\x0eplay_end.proto\x12\x07gameMsg\x1a\x0blogin.proto\"-\n\x0ePlayEndRequest\x12\x0b\n\x03sID\x18\x01 \x02(\t\x12\x0e\n\x06gateID\x18\x02 \x02(\x05\"e\n\x0fPlayEndResponse\x12\x0e\n\x06gateID\x18\x01 \x02(\x05\x12\x10\n\x08nTopStar\x18\x02 \x01(\x05\x12\x12\n\nnTotalStar\x18\x03 \x01(\x05\x12\x1c\n\x05gates\x18\x04 \x03(\x0b\x32\r.gameMsg.Gate')
+  ,
+  dependencies=[login__pb2.DESCRIPTOR,])
 
 
 
@@ -58,8 +60,8 @@ _PLAYENDREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=27,
-  serialized_end=72,
+  serialized_start=40,
+  serialized_end=85,
 )
 
 
@@ -91,6 +93,13 @@ _PLAYENDRESPONSE = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
+    _descriptor.FieldDescriptor(
+      name='gates', full_name='gameMsg.PlayEndResponse.gates', index=3,
+      number=4, type=11, cpp_type=10, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
   ],
   extensions=[
   ],
@@ -103,10 +112,11 @@ _PLAYENDRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=74,
-  serialized_end=145,
+  serialized_start=87,
+  serialized_end=188,
 )
 
+_PLAYENDRESPONSE.fields_by_name['gates'].message_type = login__pb2._GATE
 DESCRIPTOR.message_types_by_name['PlayEndRequest'] = _PLAYENDREQUEST
 DESCRIPTOR.message_types_by_name['PlayEndResponse'] = _PLAYENDRESPONSE
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)

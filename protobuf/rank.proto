@@ -5,7 +5,7 @@ message RankData{//排行数据
   required string sNick = 2;//用户昵称
   required int32 nRank = 3;// 排名
   required int32 starNum = 4;//总星数
-
+  required string sHeadimg = 5;//头像
 }
 
 message RankRequest {//排行请求协议

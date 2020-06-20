@@ -8,6 +8,8 @@ import tornado.log
 import yaml
 import logging
 import logging.config
+import time
+import datetime
 
 from configs.config_game import config_gate
 from db.mysqlapp import MySQLApp
@@ -45,11 +47,11 @@ def main():
     print (options.help)
     # print "Quit the server with CONTROL-C "
     tornado.options.parse_command_line()
-    # http_server=tornado.httpserver.HTTPServer(webapplication)
-    http_server = tornado.httpserver.HTTPServer(webapplication, ssl_options={
-       "certfile": os.path.join(os.path.abspath("."), "www.cxagile.cn.crt"),
-       "keyfile": os.path.join(os.path.abspath("."), "www.cxagile.cn.key"),
-    })
+    http_server=tornado.httpserver.HTTPServer(webapplication)
+    # http_server = tornado.httpserver.HTTPServer(webapplication, ssl_options={
+    #    "certfile": os.path.join(os.path.abspath("."), "www.cxagile.cn.crt"),
+    #    "keyfile": os.path.join(os.path.abspath("."), "www.cxagile.cn.key"),
+    # })
 
     http_server.listen(options.port)
     tornado.ioloop.IOLoop.instance().start()

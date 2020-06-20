@@ -1,5 +1,7 @@
 package gameMsg;
 
+import "login.proto";
+
 message PlayEndRequest {//玩关卡结束请求协议
   required string sID = 1;//用户id，微信openid
   required  int32 gateID = 2;//关卡id
@@ -9,5 +11,6 @@ message PlayEndResponse {//玩关卡结束响应协议
   required int32 gateID = 1;//关卡id
   optional int32 nTopStar = 2;//当前关卡获得的星级
   optional int32 nTotalStar = 3;//玩过所有关卡获得的总星级
+  repeated Gate gates = 4;//关卡信息，已经解锁的所有关卡
 }
 

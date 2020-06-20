@@ -11,13 +11,15 @@ import logging
 from logic.room import Room
 from protobuf import msg_pb2
 
-#基本思想是vip和普通房间都是先在后台创建房间，
+
+# 基本思想是vip和普通房间都是先在后台创建房间，
 # vip房间需要消耗房卡道具，可邀请微信好友加入
-#普通房间是当用户开始游戏时，先检查房间队列中有没有空闲的，如果有就直接加入，没有则创建新的普通房间加入
-#一旦创建房间，默认进入长链接模式
+# 普通房间是当用户开始游戏时，先检查房间队列中有没有空闲的，如果有就直接加入，没有则创建新的普通房间加入
+# 一旦创建房间，默认进入长链接模式
 class GameHandler(tornado.websocket.WebSocketHandler):
-    waiters = dict()#用户链接集合
+    waiters = dict()  # 用户链接集合
     room_cache = dict()  ##玩家分组集合，房间id=》房间
+
     def check_origin(self, origin):
         return True
 
@@ -35,16 +37,16 @@ class GameHandler(tornado.websocket.WebSocketHandler):
 
     @classmethod
     def get_connect(cls, uid):
-        return  cls.waiters[uid]
+        return cls.waiters[uid]
 
     def add_room(self, room):
-       self.room_cache[room.id] = room
+        self.room_cache[room.id] = room
 
     def get_room(self, id):
-        return  self.room_cache.get(id)
+        return self.room_cache.get(id)
 
     def del_room(self, id):
-         self.room_cache.pop(id)
+        self.room_cache.pop(id)
 
     def on_message(self, message):
         # logging.info("got message %r", message)
@@ -69,19 +71,17 @@ class GameHandler(tornado.websocket.WebSocketHandler):
         elif msgRequest.type == msg_pb2.EnumMsg.Value('playblockdeleterequest'):
             self.on_playblock_delete(msgRequest.request.playBlockDeleteRequest)
 
-#创建房间
+    # 创建房间
     def on_create_room(self, message):
         uid = message.sID
-        newRoom = Room(uid,GameHandler.waiters[uid])
+        newRoom = Room(uid, GameHandler.waiters[uid])
         self.room_cache[newRoom.m_id] = newRoom
-
 
     def on_join_room(self, message):
         uid = message.sID
         rid = message.sRoomID
         room = self.get_room(rid)
-        room.onJoin(uid,GameHandler.waiters[uid])
-
+        room.onJoin(uid, GameHandler.waiters[uid])
 
     def on_leave_room(self, message):
         uid = message.sID
@@ -115,7 +115,7 @@ class GameHandler(tornado.websocket.WebSocketHandler):
         goodid = message.goodID
         did = message.sDID
         room = self.get_room(rid)
-        room.onUseTool(uid,goodid,did)
+        room.onUseTool(uid, goodid, did)
 
     def on_playblock_add(self, message):
         uid = message.sID

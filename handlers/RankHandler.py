@@ -15,40 +15,33 @@ from protobuf import play_begin_pb2, msg_pb2
 
 class RankHandler(BaseHandler):
     def post(self):
-        # msgReq = msg_pb2.Msg()
-        # msgReq.ParseFromString(self.request.body)
-        #
-        # msgResp = msg_pb2.Msg()
-        # msgResp.type = msg_pb2.EnumMsg.Value('rankresponse')
-        #
-        # request = msgReq.request.rankRequest
-        # response = msgResp.response.rankResponse
+        msgReq = msg_pb2.Msg()
+        msgReq.ParseFromString(self.request.body)
 
-        resp = {}
-        resp['nErrorCode'] = config_error['success']
+        msgResp = msg_pb2.Msg()
+        msgResp.type = msg_pb2.EnumMsg.Value('rankresponse')
 
-        req = json.loads(self.request.body)
-        uid = req["request"]["sID"]
+        request = msgReq.request.rankRequest
+        response = msgResp.response.rankResponse
+
+        msgResp.response.nErrorCode = config_error['success']
+
+        uid = request.sID
 
         user = Dal_User().getUser(uid)
         if user == None:
-            resp['nErrorCode'] = config_error['userinvaild']
+            msgResp.response.nErrorCode = config_error['userinvaild']
         else:
-           resp['rankDatas'] = []
-           rankDatas = Dal_User().getRankCache()
-           for index, uid in enumerate(rankDatas):
-               user = Dal_User().getUser(uid)
-               if user:
-                   respData = {}
-                   respData['id'] = uid
-                   respData['sNick'] = user.nickname
-                   respData['nRank'] = index
-                   respData['starNum'] =  Dal_User().getUserTopGateStar(uid)
-                   resp['rankDatas'].append(respData)
+            rankDatas = Dal_User().getRankCache()
+            for index, uid in enumerate(rankDatas):
+                user = Dal_User().getUser(uid)
+                if user:
+                    respData = response.rankDatas.add()
+                    respData.id = uid
+                    respData.sNick = user.nickname
+                    respData.nRank = index
+                    respData.starNum = Dal_User().getUserTopGateStar(uid)
+                    respData.sHeadimg = user.headimgurl
 
-        msg={}
-        msg["type"] = config_game['msgType']['rankresponse']
-        msg["response"] = resp
-        resp = json.dumps(msg)
-
-        self.write(resp)
+        data = msgResp.SerializeToString()
+        self.write(data)
