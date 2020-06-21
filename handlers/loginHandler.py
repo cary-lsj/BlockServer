@@ -47,7 +47,7 @@ class LoginHandler(BaseHandler):
             # 新用户默认第一关解锁
             newgate = Gateinfo(gid=1, uid=uid, gatestar=0, state=1)
             gid = Dal_Gateinfo().addGateinfo(newgate)
-            nowtime = int(time.time())
+            nowtime = Utils().dbTimeCreate()
             user = User(id=uid, nickname=nick, headimgurl=headimg, \
                         tips=0, gates=str(gid), sex=gender, city=city, country=country, province=province, \
                         unionid="", dtips=0, ranklevel=0, gold=0, money=0, goods="", tipstime=nowtime, ads=0, \
