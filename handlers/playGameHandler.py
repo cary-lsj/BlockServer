@@ -50,9 +50,10 @@ class PlayGameHandler(BaseHandler):
             else:
                 gateinfo = Dal_User().getGateInfoByGateID(user.id, gateID)
                 response.gateId = gateinfo.gid
-                response.nTopStar = gateinfo.gatestar
-                response.nPrompt = user.tips
-                self.add_begin_time(user.id, int(time.time()))
+                beginTime = int(time.time())
+                endTime = beginTime
+                response.nBeginTime = endTime
+                self.add_begin_time(user.id, beginTime)
 
         data = msgResp.SerializeToString()
         self.write(data)
@@ -77,11 +78,6 @@ class PlayGameHandler(BaseHandler):
             if bUnLock == False:
                 msgResp.response.nErrorCode = config_error['gateunlock']
             else:
-                if user.dtips > 0:  # 扣除提示机会
-                    user.tips = user.tips - user.dtips
-                    kwargs = {"tips": user.tips}
-                    Dal_User().uqdateUser(user.id, **kwargs)
-
                 gateinfo = Dal_User().getGateInfoByGateID(user.id, gateID)
                 gatestar = 0
                 beginTime = self.get_begin_time(user.id)
@@ -94,17 +90,29 @@ class PlayGameHandler(BaseHandler):
                         gatestar = 2
                     elif useTime < config_game['timeOneStar']:
                         gatestar = 1
-
+                new_get_gold = 0
                 if gateinfo.gatestar < gatestar:
+                    ## 获得新的星星 需要给他发奖励
+                    for i in range(gateinfo.gatestar, gatestar):
+                        if config_game['goldStar'][i] != None:
+                            new_get_gold += config_game['goldStar'][i]
+
                     kwargs = {"gatestar": gatestar}
                     Dal_Gateinfo().uqdateGateinfo(gateinfo.id, **kwargs)
+                else:
+                    new_get_gold = config_game['goldPlayEnd']
+
+                user.gold = user.gold + new_get_gold
+                kwargs = {"gold": user.gold}
+                Dal_User().uqdateUser(user.id, **kwargs)
 
                 # 刷新排行
                 Dal_User().updateRankCache(uid)
 
                 response.gateID = gateID
                 response.nTopStar = gatestar
-                response.nTotalStar = Dal_User().getUserTopGateStar(user.id)
+                response.nGetGold = new_get_gold
+                response.nGold = user.gold
 
                 # 如果当前玩的是玩家最大关卡，则解锁下一关卡
                 newGateID = int(gateID) + 1

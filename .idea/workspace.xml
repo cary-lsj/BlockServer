@@ -7,115 +7,13 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="FUSProjectUsageTrigger">
-    <session id="259485217">
-      <usages-collector id="statistics.file.extensions.open">
-        <counts>
-          <entry key="py" value="8" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.types.open">
-        <counts>
-          <entry key="Python" value="8" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.extensions.edit">
-        <counts>
-          <entry key="py" value="4" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.types.edit">
-        <counts>
-          <entry key="Python" value="4" />
-        </counts>
-      </usages-collector>
-    </session>
-  </component>
-  <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/handlers/loginHandler.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="260">
-              <caret line="65" lean-forward="true" selection-start-line="65" selection-end-line="65" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/orm/orm.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="344">
-              <caret line="86" selection-start-line="86" selection-end-line="86" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://C:/Python27/Lib/site-packages/google/protobuf/internal/python_message.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="200">
-              <caret line="470" selection-start-line="470" selection-end-line="470" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://C:/Python27/Lib/site-packages/tornado/web.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1128">
-              <caret line="1593" column="18" selection-start-line="1592" selection-start-column="18" selection-end-line="1593" selection-end-column="18" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
-  </component>
-  <component name="IdeDocumentHistory">
-    <option name="CHANGED_PATHS">
-      <list>
-        <option value="$PROJECT_DIR$/gameserver.py" />
-        <option value="$PROJECT_DIR$/handlers/loginHandler.py" />
-      </list>
-    </option>
-  </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="467" />
-    <option name="y" value="78" />
-    <option name="width" value="1327" />
-    <option name="height" value="749" />
-  </component>
   <component name="ProjectId" id="1cpylCBx7Gchuy8zDKbgAgUbXa9" />
-  <component name="ProjectView">
-    <navigator proportions="" version="1">
-      <foldersAlwaysOnTop value="true" />
-    </navigator>
-    <panes>
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="BlockServer" type="b2602c69:ProjectViewProjectNode" />
-              <item name="BlockServer" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="BlockServer" type="b2602c69:ProjectViewProjectNode" />
-              <item name="BlockServer" type="462c0819:PsiDirectoryNode" />
-              <item name="handlers" type="462c0819:PsiDirectoryNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
-      <pane id="Scope" />
-    </panes>
-  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="E:/GameTset/ZKMJ/ZKMJServer" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../ZKMJ-master/ZKMJServer" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
@@ -124,18 +22,6 @@
       <recent name="D:\git\BlockServer\handlers" />
       <recent name="C:\BlockServer\handlers" />
     </key>
-  </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
-      <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
-      </list>
-    </option>
   </component>
   <component name="RunManager">
     <configuration name="Unnamed" type="PythonConfigurationType" factoryName="Python">
@@ -161,7 +47,7 @@
     </configuration>
   </component>
   <component name="SvnConfiguration" cleanupOnStartRun="true">
-    <configuration>C:\Users\lichi\AppData\Roaming\Subversion</configuration>
+    <configuration>C:\Users\Administrator\AppData\Roaming\Subversion</configuration>
     <supportedVersion>125</supportedVersion>
   </component>
   <component name="TaskManager">
@@ -174,103 +60,61 @@
     </task>
     <servers />
   </component>
-  <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
-    <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.1691254" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info id="Favorites" order="2" side_tool="true" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" />
-      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.3991323" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Version Control" order="7" />
-      <window_info anchor="bottom" id="Terminal" order="8" />
-      <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
-      <window_info anchor="bottom" id="Python Console" order="10" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-    </layout>
-    <layout-to-restore>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.1691254" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info id="Favorites" order="2" side_tool="true" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" />
-      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.3991323" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Version Control" order="7" />
-      <window_info anchor="bottom" id="Terminal" order="8" />
-      <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
-      <window_info anchor="bottom" id="Python Console" order="10" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-    </layout-to-restore>
-  </component>
   <component name="WindowStateProjectService">
     <state x="659" y="285" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1591363522520">
       <screen x="0" y="0" width="1858" height="1080" />
     </state>
     <state x="659" y="285" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1858.1080@0.0.1858.1080" timestamp="1591363522520" />
-    <state width="1223" height="449" key="DebuggerActiveHint" timestamp="1592658037825">
+    <state width="1254" height="449" key="DebuggerActiveHint" timestamp="1592901264200">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1183" height="466" key="DebuggerActiveHint/0.0.1858.1080@0.0.1858.1080" timestamp="1591363610893" />
-    <state width="1223" height="449" key="DebuggerActiveHint/0.0.1920.1040@0.0.1920.1040" timestamp="1592658037825" />
-    <state x="733" y="282" key="FileChooserDialogImpl" timestamp="1592641767880">
+    <state width="1254" height="449" key="DebuggerActiveHint/0.0.1920.1040@0.0.1920.1040" timestamp="1592901264200" />
+    <state x="733" y="282" key="FileChooserDialogImpl" timestamp="1592819285020">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="709" y="293" key="FileChooserDialogImpl/0.0.1858.1080@0.0.1858.1080" timestamp="1591435948123" />
-    <state x="733" y="282" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1592641767880" />
-    <state width="949" height="348" key="GridCell.Tab.0.bottom" timestamp="1592658073429">
+    <state x="733" y="282" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1592819285020" />
+    <state width="1117" height="289" key="GridCell.Tab.0.bottom" timestamp="1592912754674">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1814" height="361" key="GridCell.Tab.0.bottom/0.0.1858.1080@0.0.1858.1080" timestamp="1591436001514" />
-    <state width="949" height="348" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1592658073429" />
-    <state width="949" height="348" key="GridCell.Tab.0.center" timestamp="1592658073429">
+    <state width="1117" height="289" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1592912754674" />
+    <state width="1117" height="289" key="GridCell.Tab.0.center" timestamp="1592912754674">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1814" height="361" key="GridCell.Tab.0.center/0.0.1858.1080@0.0.1858.1080" timestamp="1591436001514" />
-    <state width="949" height="348" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1592658073429" />
-    <state width="949" height="348" key="GridCell.Tab.0.left" timestamp="1592658073428">
+    <state width="1117" height="289" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1592912754674" />
+    <state width="1117" height="289" key="GridCell.Tab.0.left" timestamp="1592912754674">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1814" height="361" key="GridCell.Tab.0.left/0.0.1858.1080@0.0.1858.1080" timestamp="1591436001514" />
-    <state width="949" height="348" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1592658073428" />
-    <state width="949" height="348" key="GridCell.Tab.0.right" timestamp="1592658073429">
+    <state width="1117" height="289" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1592912754674" />
+    <state width="1117" height="289" key="GridCell.Tab.0.right" timestamp="1592912754674">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1814" height="361" key="GridCell.Tab.0.right/0.0.1858.1080@0.0.1858.1080" timestamp="1591436001514" />
-    <state width="949" height="348" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1592658073429" />
-    <state width="949" height="348" key="GridCell.Tab.1.bottom" timestamp="1592658078400">
+    <state width="1117" height="289" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1592912754674" />
+    <state width="1117" height="289" key="GridCell.Tab.1.bottom" timestamp="1592912765207">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1814" height="349" key="GridCell.Tab.1.bottom/0.0.1858.1080@0.0.1858.1080" timestamp="1591436001420" />
-    <state width="949" height="348" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1592658078400" />
-    <state width="949" height="348" key="GridCell.Tab.1.center" timestamp="1592658078400">
+    <state width="1117" height="289" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1592912765207" />
+    <state width="1117" height="289" key="GridCell.Tab.1.center" timestamp="1592912765206">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1814" height="349" key="GridCell.Tab.1.center/0.0.1858.1080@0.0.1858.1080" timestamp="1591436001420" />
-    <state width="949" height="348" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1592658078400" />
-    <state width="949" height="348" key="GridCell.Tab.1.left" timestamp="1592658078400">
+    <state width="1117" height="289" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1592912765206" />
+    <state width="1117" height="289" key="GridCell.Tab.1.left" timestamp="1592912765206">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1814" height="349" key="GridCell.Tab.1.left/0.0.1858.1080@0.0.1858.1080" timestamp="1591436001420" />
-    <state width="949" height="348" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1592658078400" />
-    <state width="949" height="348" key="GridCell.Tab.1.right" timestamp="1592658078400">
+    <state width="1117" height="289" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1592912765206" />
+    <state width="1117" height="289" key="GridCell.Tab.1.right" timestamp="1592912765207">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1814" height="349" key="GridCell.Tab.1.right/0.0.1858.1080@0.0.1858.1080" timestamp="1591436001420" />
-    <state width="949" height="348" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1592658078400" />
+    <state width="1117" height="289" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1592912765207" />
     <state x="461" y="164" key="SettingsEditor" timestamp="1592636926449">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -280,14 +124,15 @@
     </state>
     <state width="937" height="548" key="XDebugger.FullValuePopup/0.0.1858.1080@0.0.1858.1080" timestamp="1591255691350" />
     <state width="969" height="528" key="XDebugger.FullValuePopup/0.0.1920.1040@0.0.1920.1040" timestamp="1592560411677" />
-    <state x="631" y="138" width="596" height="804" key="find.popup" timestamp="1591346330341">
-      <screen x="0" y="0" width="1858" height="1080" />
-    </state>
-    <state x="631" y="138" width="596" height="804" key="find.popup/0.0.1858.1080@0.0.1858.1080" timestamp="1591346330341" />
-    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1592641370589">
+    <state x="652" y="133" width="616" height="775" key="find.popup" timestamp="1592805892186">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1592641370589" />
+    <state x="631" y="138" width="596" height="804" key="find.popup/0.0.1858.1080@0.0.1858.1080" timestamp="1591346330341" />
+    <state x="652" y="133" width="616" height="775" key="find.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1592805892186" />
+    <state x="623" y="224" width="672" height="679" key="search.everywhere.popup" timestamp="1592912713283">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="623" y="224" width="672" height="679" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1592912713283" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -308,75 +153,9 @@
     </breakpoint-manager>
     <watches-manager>
       <configuration name="PythonConfigurationType">
-        <watch expression="self.request.body" language="Python" />
+        <watch expression="msgResp" language="Python" />
+        <watch expression="response.nTopStar" language="Python" />
       </configuration>
     </watches-manager>
-  </component>
-  <component name="debuggerHistoryManager">
-    <expressions id="watch">
-      <expression>
-        <expression-string>self.request.body</expression-string>
-        <language-id>Python</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-    </expressions>
-  </component>
-  <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/gameserver.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="50" column="4" selection-start-line="50" selection-start-column="4" selection-end-line="50" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tools/singleton.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="192">
-          <caret line="8" selection-start-line="8" selection-end-line="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dal/dal_user.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="336">
-          <caret line="26" column="8" lean-forward="true" selection-start-line="26" selection-start-column="8" selection-end-line="26" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tools/utils.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="193" column="8" selection-start-line="193" selection-start-column="8" selection-end-line="193" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://C:/Python27/Lib/site-packages/tornado/web.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1128">
-          <caret line="1593" column="18" selection-start-line="1592" selection-start-column="18" selection-end-line="1593" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://C:/Python27/Lib/site-packages/google/protobuf/internal/python_message.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
-          <caret line="470" selection-start-line="470" selection-end-line="470" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/orm/orm.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="344">
-          <caret line="86" selection-start-line="86" selection-end-line="86" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/handlers/loginHandler.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="260">
-          <caret line="65" lean-forward="true" selection-start-line="65" selection-end-line="65" />
-        </state>
-      </provider>
-    </entry>
   </component>
 </project>

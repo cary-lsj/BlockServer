@@ -6,7 +6,8 @@ class User(Model):
     __table__ = 'userinfo'
     __primary_key__ = 'id'
 
-    id = StringField('id', True)
+    id = IntegerField('id', False)
+    username = StringField('username', True)
     nickname = StringField('nickname', True)
     headimgurl = StringField('headimgurl', True)
     sex = IntegerField('sex', True)

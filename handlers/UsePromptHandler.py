@@ -15,32 +15,28 @@ from protobuf import play_begin_pb2, msg_pb2
 
 class UsePromptHandler(BaseHandler):
     def post(self):
-        # msgReq = msg_pb2.Msg()
-        # msgReq.ParseFromString(self.request.body)
-        #
-        # msgResp = msg_pb2.Msg()
-        # msgResp.type = msg_pb2.EnumMsg.Value('usepromptresponse')
-        #
-        # request = msgReq.request.usePromptRequest
-        # response = msgResp.response.usePromptResponse
+        msgReq = msg_pb2.Msg()
+        msgReq.ParseFromString(self.request.body)
 
-        resp = {}
-        resp['nErrorCode'] = config_error['success']
+        msgResp = msg_pb2.Msg()
+        msgResp.type = msg_pb2.EnumMsg.Value('usepromptresponse')
 
-        req = json.loads(self.request.body)
-        uid = req["request"]["sID"]
+        request = msgReq.request.usePromptRequest
+        response = msgResp.response.usePromptResponse
+        uid = request.sID
 
         user = Dal_User().getUser(uid)
+        costGold = config_game['buyTipPrice']
         if user == None:
-            resp['nErrorCode'] = config_error['userinvaild']
-        elif user.tips == 0:
-            resp['nErrorCode'] = config_error['ptomptnone']
+            msgResp.response.nErrorCode = config_error['userinvaild']
+        elif user.gold < costGold:
+            msgResp.response.nErrorCode = config_error['moneyerror']
         else:
-            user.dtips = user.dtips + 1  # 每次开始，临时的提示数据清空，结束的时候写入数据库
+            msgResp.response.nErrorCode = config_error['success']
+            user.gold = user.gold - costGold
+            kwargs = {"gold": user.gold}
+            Dal_User().uqdateUser(user.id, **kwargs)
+            response.nGold = user.gold
 
-        msg = {}
-        msg["type"] = config_game['msgType']['usepromptresponse']
-        msg["response"] = resp
-        resp = json.dumps(msg)
-
-        self.write(resp)
+        data = msgResp.SerializeToString()
+        self.write(data)

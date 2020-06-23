@@ -1,11 +1,14 @@
 package gameMsg;
 
 message SeeAdRequest {//看广告请求协议
-  required string sID = 1;//用户id，微信openid
-  required  int32 adID = 2;//广告id
+  required int32 nID = 1;//用户id，微信openid
+  required int32 nType = 2;//广告类型 1看视频广告得金币 2结算看视频 3弹窗广告  4分享
+  optional int32 nGlod = 3;//获得奖励翻倍基数
 }
 
 message SeeAdResponse {//看广告响应协议
-  optional int32 nPrompt = 1;//当前拥有的提示机会个数
+  required int32 nType = 1;//广告类型
+  optional int32 nTimes = 2;//剩余次数
+  optional int32 nGlod = 3;//玩家拥有的金币
 }
 

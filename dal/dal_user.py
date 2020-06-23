@@ -19,15 +19,22 @@ class Dal_User(Dal_base):
 
     ##增
     def addUser(self,newUser):
-        newUser.save()
+        newUser.id = newUser.save()
         self._m_cache[newUser.id]=newUser
         ## 返回一个新增user的id
         return newUser.id
 
     ## 查
     def getUser(self,pk):
-        pk = str(pk)
+        pk = int(pk)
         return self.get(pk,User)
+
+    def getLoginUser(self,username):
+        username = str(username)
+        for k,v in self._m_cache.iteritems():
+            if v.username == username:
+                return v
+        return None
 
     ## 改
     def uqdateUser(self,pk,**kwargs):

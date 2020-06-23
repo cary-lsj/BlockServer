@@ -103,30 +103,6 @@ class Utils:
         loger = logging.getLogger("ingenia")
         loger.info(msg)
 
-    def logPaiString(self, type, value):
-        if type == 0:
-            if value == 1:
-                return "红中"
-            elif value == 2:
-                return "发财"
-            elif value == 3:
-                return "白板"
-        elif type == 1:
-            if value == 1:
-                return "东风"
-            elif value == 2:
-                return "南风"
-            elif value == 3:
-                return "西风"
-            elif value == 4:
-                return "北风"
-        elif type == 2:
-            return str(value) + "万"
-        elif type == 3:
-            return str(value) + "条"
-        elif type == 4:
-            return str(value) + "饼"
-
     # 根据id生成邀请码
     def encodeRandomCode(self, id, length=7):
         '''
@@ -277,8 +253,7 @@ class Utils:
         end_time = self.WeekEndTime()
         return end_time - cur_time
 
-        # 获取上月第一天的时间戳
-
+    # 获取上月第一天的时间戳
     def LastMonthBeginTime(self):
         now = datetime.datetime.now()
         this_month_start = datetime.datetime(now.year, now.month, 1)
@@ -316,8 +291,7 @@ class Utils:
         end_time = self.MonthEndTime()
         return end_time - cur_time
 
-        # 获取去年第一天的时间戳
-
+    # 获取去年第一天的时间戳
     def LastYearBeginTime(self):
         now = datetime.datetime.now()
         this_year_start = datetime.datetime(now.year, 1, 1)

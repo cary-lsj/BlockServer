@@ -37,7 +37,7 @@ class RankHandler(BaseHandler):
                 user = Dal_User().getUser(uid)
                 if user:
                     respData = response.rankDatas.add()
-                    respData.id = uid
+                    respData.id = int(uid)
                     respData.sNick = user.nickname
                     respData.nRank = index
                     respData.starNum = Dal_User().getUserTopGateStar(uid)

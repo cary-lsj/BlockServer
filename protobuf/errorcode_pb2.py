@@ -20,7 +20,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   name='errorcode.proto',
   package='gameMsg',
   syntax='proto2',
-  serialized_pb=_b('\n\x0f\x65rrorcode.proto\x12\x07gameMsg*u\n\tErrorCode\x12\x0b\n\x07success\x10\x01\x12\x0f\n\x0buserinvaild\x10\x02\x12\x0c\n\x08pwderror\x10\x03\x12\x0e\n\nmoneyerror\x10\x04\x12\x0e\n\ngateunlock\x10\x05\x12\x0e\n\nptomptnone\x10\x06\x12\x0c\n\x08maxgates\x10\x07')
+  serialized_pb=_b('\n\x0f\x65rrorcode.proto\x12\x07gameMsg*\xbe\x01\n\tErrorCode\x12\x0b\n\x07success\x10\x01\x12\x0f\n\x0buserinvaild\x10\x02\x12\x0c\n\x08pwderror\x10\x03\x12\x0e\n\nmoneyerror\x10\x04\x12\x0e\n\ngateunlock\x10\x05\x12\x0e\n\nptomptnone\x10\x06\x12\x0c\n\x08maxgates\x10\x07\x12\x0c\n\x08roomfull\x10\x08\x12\x0f\n\x0broomnotfull\x10\t\x12\x0b\n\x07nogoods\x10\n\x12\x0c\n\x08toolnone\x10\x0b\x12\r\n\ttimesnone\x10\x0c')
 )
 
 _ERRORCODE = _descriptor.EnumDescriptor(
@@ -57,11 +57,31 @@ _ERRORCODE = _descriptor.EnumDescriptor(
       name='maxgates', index=6, number=7,
       options=None,
       type=None),
+    _descriptor.EnumValueDescriptor(
+      name='roomfull', index=7, number=8,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='roomnotfull', index=8, number=9,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='nogoods', index=9, number=10,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='toolnone', index=10, number=11,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='timesnone', index=11, number=12,
+      options=None,
+      type=None),
   ],
   containing_type=None,
   options=None,
-  serialized_start=28,
-  serialized_end=145,
+  serialized_start=29,
+  serialized_end=219,
 )
 _sym_db.RegisterEnumDescriptor(_ERRORCODE)
 
@@ -73,6 +93,11 @@ moneyerror = 4
 gateunlock = 5
 ptomptnone = 6
 maxgates = 7
+roomfull = 8
+roomnotfull = 9
+nogoods = 10
+toolnone = 11
+timesnone = 12
 
 
 DESCRIPTOR.enum_types_by_name['ErrorCode'] = _ERRORCODE

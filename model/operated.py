@@ -2,7 +2,7 @@
 from orm.orm import Model, IntegerField, StringField
 
 
-class User(Model):
+class Operated(Model):
     __table__ = 'operated'
     __primary_key__ = 'id'
 

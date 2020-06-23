@@ -7,6 +7,5 @@ message PlayBeginRequest {//玩关卡请求协议
 
 message PlayBeginResponse {//玩关卡响应协议
   required int32 gateId = 1;//关卡id
-  optional int32 nTopStar = 2;//当前关卡玩过的最高星级
-  optional int32 nPrompt = 3;//当前拥有的提示机会个数
+  optional int32 nBeginTime = 2;//游戏结束时间
 }

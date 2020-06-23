@@ -19,7 +19,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   name='play_begin.proto',
   package='gameMsg',
   syntax='proto2',
-  serialized_pb=_b('\n\x10play_begin.proto\x12\x07gameMsg\"/\n\x10PlayBeginRequest\x12\x0b\n\x03sID\x18\x01 \x02(\t\x12\x0e\n\x06gateID\x18\x02 \x02(\x05\"F\n\x11PlayBeginResponse\x12\x0e\n\x06gateId\x18\x01 \x02(\x05\x12\x10\n\x08nTopStar\x18\x02 \x01(\x05\x12\x0f\n\x07nPrompt\x18\x03 \x01(\x05')
+  serialized_pb=_b('\n\x10play_begin.proto\x12\x07gameMsg\"/\n\x10PlayBeginRequest\x12\x0b\n\x03sID\x18\x01 \x02(\t\x12\x0e\n\x06gateID\x18\x02 \x02(\x05\"7\n\x11PlayBeginResponse\x12\x0e\n\x06gateId\x18\x01 \x02(\x05\x12\x12\n\nnBeginTime\x18\x02 \x01(\x05')
 )
 
 
@@ -78,15 +78,8 @@ _PLAYBEGINRESPONSE = _descriptor.Descriptor(
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='nTopStar', full_name='gameMsg.PlayBeginResponse.nTopStar', index=1,
+      name='nBeginTime', full_name='gameMsg.PlayBeginResponse.nBeginTime', index=1,
       number=2, type=5, cpp_type=1, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='nPrompt', full_name='gameMsg.PlayBeginResponse.nPrompt', index=2,
-      number=3, type=5, cpp_type=1, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -104,7 +97,7 @@ _PLAYBEGINRESPONSE = _descriptor.Descriptor(
   oneofs=[
   ],
   serialized_start=78,
-  serialized_end=148,
+  serialized_end=133,
 )
 
 DESCRIPTOR.message_types_by_name['PlayBeginRequest'] = _PLAYBEGINREQUEST

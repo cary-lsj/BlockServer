@@ -19,7 +19,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   name='use_prompt.proto',
   package='gameMsg',
   syntax='proto2',
-  serialized_pb=_b('\n\x10use_prompt.proto\x12\x07gameMsg\"\x1f\n\x10UsePromptRequest\x12\x0b\n\x03sID\x18\x01 \x02(\t\"$\n\x11UsePromptResponse\x12\x0f\n\x07nPrompt\x18\x01 \x01(\x05')
+  serialized_pb=_b('\n\x10use_prompt.proto\x12\x07gameMsg\"\x1f\n\x10UsePromptRequest\x12\x0b\n\x03sID\x18\x01 \x02(\t\"\"\n\x11UsePromptResponse\x12\r\n\x05nGold\x18\x01 \x01(\x05')
 )
 
 
@@ -64,7 +64,7 @@ _USEPROMPTRESPONSE = _descriptor.Descriptor(
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='nPrompt', full_name='gameMsg.UsePromptResponse.nPrompt', index=0,
+      name='nGold', full_name='gameMsg.UsePromptResponse.nGold', index=0,
       number=1, type=5, cpp_type=1, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
@@ -83,7 +83,7 @@ _USEPROMPTRESPONSE = _descriptor.Descriptor(
   oneofs=[
   ],
   serialized_start=62,
-  serialized_end=98,
+  serialized_end=96,
 )
 
 DESCRIPTOR.message_types_by_name['UsePromptRequest'] = _USEPROMPTREQUEST

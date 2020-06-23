@@ -10,7 +10,8 @@ message PlayEndRequest {//玩关卡结束请求协议
 message PlayEndResponse {//玩关卡结束响应协议
   required int32 gateID = 1;//关卡id
   optional int32 nTopStar = 2;//当前关卡获得的星级
-  optional int32 nTotalStar = 3;//玩过所有关卡获得的总星级
-  repeated Gate gates = 4;//关卡信息，已经解锁的所有关卡
+  optional int32 nGetGold = 3;//当前关卡获得的金币
+  optional int32 nGold = 4;//玩家的金币
+  repeated Gate gates = 5;//关卡信息，已经解锁的所有关卡
 }
 

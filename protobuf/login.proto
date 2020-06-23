@@ -1,17 +1,17 @@
 package gameMsg;
 
 message User{//用户
-  required string nUserID = 1;//用户id
-  optional string sNick = 2;//用户昵称
-  optional int32 nExp = 3;//用户经验值
-  optional int32 nGold = 4;//用户游戏币
-  optional string sHeadimg = 5;//用户头像
-  optional int32 starNum = 6;//玩家获得星星总数
+  required int32 nUserID = 1;//用户id
+  optional int32 nGold = 2;//用户游戏币
+  optional int32 nSeeAdTimes = 3;//可以看广告的次数
+  optional int32 nShareTimes = 4;//可以分享的次数
+  optional int32 nGetTipsTimes = 5;//可以获取提示的次数
+  optional int32 nPopaddsTimes = 6;//可以弹出广告的次数
 }
 
 message Gate{//关卡数据
   required int32 id = 1;//关卡id
-  required int32  starNum = 2;//获得星星数
+  required int32 starNum = 2;//获得星星数
 }
 
 message LoginRequest {//登录请求协议
@@ -25,15 +25,8 @@ message LoginRequest {//登录请求协议
 }
 
 message LoginResponse {//登录响应协议
-  optional User requester = 1;//用户信息
+  required User requester = 1;//用户信息
   repeated Gate gates = 2;//关卡信息，已经解锁的所有关卡
-  optional int32 nExp = 3;//用户经验值
-  optional int32 nGold = 4;//用户游戏币
-  optional int32 nTotalStar = 5;//用户总星级
-  optional int32 nTotalGate = 6;//总关数
-  optional int32 nServerTime = 7;//服务器时间
-  optional bool bSeeAd = 8;//可以看广告
-  optional bool bShare = 9;//可以分享
-  optional bool bGetTips = 10;//可以获取提示
+  required int32 nServerTime = 3;//服务器时间
 }
 

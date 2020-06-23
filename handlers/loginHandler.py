@@ -33,7 +33,7 @@ class LoginHandler(BaseHandler):
 
         request = msgReq.request.loginRequest
         resp = msgResp.response.loginResponse
-        uid = request.sID
+        username = request.sID
         nick = request.sNick
         headimg = request.sHeadimg
         gender = request.nGender
@@ -41,17 +41,17 @@ class LoginHandler(BaseHandler):
         province = request.sProvince
         city = request.sCity
 
-        user = Dal_User().getUser(uid)
+        user = Dal_User().getLoginUser(username)
         if user == None:
-            Utils().logDebug("创建新用户:" + str(nick) + " ; openid:" + str(uid))
+            Utils().logDebug("创建新用户:" + str(nick) + " ; openid:" + str(username))
             # 新用户默认第一关解锁
-            newgate = Gateinfo(gid=1, uid=uid, gatestar=0, state=1)
+            newgate = Gateinfo(gid=1, uid=username, gatestar=0, state=1)
             gid = Dal_Gateinfo().addGateinfo(newgate)
             nowtime = Utils().dbTimeCreate()
-            user = User(id=uid, nickname=nick, headimgurl=headimg, \
+            user = User(id=None, username=username, nickname=nick, headimgurl=headimg, \
                         tips=0, gates=str(gid), sex=gender, city=city, country=country, province=province, \
                         unionid="", dtips=0, ranklevel=0, gold=0, money=0, goods="", tipstime=nowtime, ads=0, \
-                        adtime=nowtime, shares=0, sharetime=nowtime,popadds=0, popaddtime=nowtime)
+                        adtime=nowtime, shares=0, sharetime=nowtime, popadds=0, popaddtime=nowtime)
             Dal_User().addUser(user)
 
         if nick != "" and nick != user.nickname:
@@ -71,9 +71,13 @@ class LoginHandler(BaseHandler):
             gate.id = gateinfo.gid
             gate.starNum = gateinfo.gatestar
 
-        resp.nTotalStar = Dal_User().getUserTopGateStar(user.id)
-        resp.nTotalGate = config_game['maxGate']
         resp.nServerTime = int(time.time())
+        resp.requester.nUserID = user.id
+        resp.requester.nSeeAdTimes = config_game['seeVideoAdTimes'] - user.ads
+        resp.requester.nShareTimes = config_game['shareTimes'] - user.shares
+        resp.requester.nGetTipsTimes = user.tips
+        resp.requester.nPopaddsTimes = config_game['seePopAdTimes'] - user.popadds
+        resp.requester.nGold = user.gold
 
         msgResp.response.nErrorCode = config_error['success']
         data = msgResp.SerializeToString()

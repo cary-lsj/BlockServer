@@ -5,6 +5,6 @@ message UsePromptRequest {//提示机会请求协议
 }
 
 message UsePromptResponse {//提示机会响应协议
-  optional int32 nPrompt = 1;//当前拥有的提示机会个数
+  optional int32 nGold = 1;//用户游戏币
 }
 

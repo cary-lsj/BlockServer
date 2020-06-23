@@ -30,15 +30,16 @@ import game_tick_pb2 as game__tick__pb2
 import use_tool_pb2 as use__tool__pb2
 import buy_pb2 as buy__pb2
 import play_block_pb2 as play__block__pb2
+import assets_pb2 as assets__pb2
 
 
 DESCRIPTOR = _descriptor.FileDescriptor(
   name='msg.proto',
   package='gameMsg',
   syntax='proto2',
-  serialized_pb=_b('\n\tmsg.proto\x12\x07gameMsg\x1a\x0f\x65rrorcode.proto\x1a\x0blogin.proto\x1a\x10play_begin.proto\x1a\x0eplay_end.proto\x1a\x0csee_ad.proto\x1a\x10use_prompt.proto\x1a\nrank.proto\x1a\x11\x63reate_room.proto\x1a\x0fjoin_room.proto\x1a\x10leave_room.proto\x1a\x10start_game.proto\x1a\x0e\x65nd_game.proto\x1a\x0fgame_tick.proto\x1a\x0euse_tool.proto\x1a\tbuy.proto\x1a\x10play_block.proto\"\xb9\x06\n\x07Request\x12+\n\x0cloginRequest\x18\x01 \x01(\x0b\x32\x15.gameMsg.LoginRequest\x12\x33\n\x10playBeginRequest\x18\x02 \x01(\x0b\x32\x19.gameMsg.PlayBeginRequest\x12/\n\x0eplayEndRequest\x18\x03 \x01(\x0b\x32\x17.gameMsg.PlayEndRequest\x12+\n\x0cseeAdRequest\x18\x04 \x01(\x0b\x32\x15.gameMsg.SeeAdRequest\x12\x33\n\x10usePromptRequest\x18\x05 \x01(\x0b\x32\x19.gameMsg.UsePromptRequest\x12)\n\x0brankRequest\x18\x06 \x01(\x0b\x32\x14.gameMsg.RankRequest\x12\x35\n\x11\x63reateRoomRequest\x18\x07 \x01(\x0b\x32\x1a.gameMsg.CreateRoomRequest\x12\x31\n\x0fjoinRoomRequest\x18\x08 \x01(\x0b\x32\x18.gameMsg.JoinRoomRequest\x12\x33\n\x10leaveRoomRequest\x18\t \x01(\x0b\x32\x19.gameMsg.LeaveRoomRequest\x12/\n\x0e\x65ndGameRequest\x18\n \x01(\x0b\x32\x17.gameMsg.EndGameRequest\x12\x33\n\x10startGameRequest\x18\x0b \x01(\x0b\x32\x19.gameMsg.StartGameRequest\x12\x33\n\x10matchGameRequest\x18\x0c \x01(\x0b\x32\x19.gameMsg.MatchGameRequest\x12/\n\x0euseToolRequest\x18\r \x01(\x0b\x32\x17.gameMsg.UseToolRequest\x12\'\n\nbuyRequest\x18\x0e \x01(\x0b\x32\x13.gameMsg.BuyRequest\x12\x39\n\x13playBlockAddRequest\x18\x0f \x01(\x0b\x32\x1c.gameMsg.PlayBlockAddRequest\x12?\n\x16playBlockDeleteRequest\x18\x10 \x01(\x0b\x32\x1f.gameMsg.PlayBlockDeleteRequest\"\x82\x07\n\x08Response\x12&\n\nnErrorCode\x18\x01 \x02(\x0e\x32\x12.gameMsg.ErrorCode\x12-\n\rloginResponse\x18\x02 \x01(\x0b\x32\x16.gameMsg.LoginResponse\x12\x35\n\x11playBeginResponse\x18\x03 \x01(\x0b\x32\x1a.gameMsg.PlayBeginResponse\x12\x31\n\x0fplayEndResponse\x18\x04 \x01(\x0b\x32\x18.gameMsg.PlayEndResponse\x12-\n\rseeAdResponse\x18\x05 \x01(\x0b\x32\x16.gameMsg.SeeAdResponse\x12\x35\n\x11usePromptResponse\x18\x06 \x01(\x0b\x32\x1a.gameMsg.UsePromptResponse\x12+\n\x0crankResponse\x18\x07 \x01(\x0b\x32\x15.gameMsg.RankResponse\x12\x37\n\x12\x63reateRoomResponse\x18\x08 \x01(\x0b\x32\x1b.gameMsg.CreateRoomResponse\x12\x33\n\x10joinRoomResponse\x18\t \x01(\x0b\x32\x19.gameMsg.JoinRoomResponse\x12\x35\n\x11leaveRoomResponse\x18\n \x01(\x0b\x32\x1a.gameMsg.LeaveRoomResponse\x12\x31\n\x0f\x65ndGameResponse\x18\x0b \x01(\x0b\x32\x18.gameMsg.EndGameResponse\x12\x35\n\x11startGameResponse\x18\x0c \x01(\x0b\x32\x1a.gameMsg.StartGameResponse\x12\x35\n\x11matchGameResponse\x18\r \x01(\x0b\x32\x1a.gameMsg.MatchGameResponse\x12\x31\n\x0fuseToolResponse\x18\x0e \x01(\x0b\x32\x18.gameMsg.UseToolResponse\x12)\n\x0b\x62uyResponse\x18\x0f \x01(\x0b\x32\x14.gameMsg.BuyResponse\x12;\n\x14playBlockAddResponse\x18\x10 \x01(\x0b\x32\x1d.gameMsg.PlayBlockAddResponse\x12\x41\n\x17playBlockDeleteResponse\x18\x11 \x01(\x0b\x32 .gameMsg.PlayBlockDeleteResponse\"\x9a\x03\n\x06Notify\x12/\n\x0ejoinRoomNotify\x18\x01 \x01(\x0b\x32\x17.gameMsg.JoinRoomNotify\x12\x31\n\x0fleaveRoomNotify\x18\x02 \x01(\x0b\x32\x18.gameMsg.LeaveRoomNotify\x12\x31\n\x0fstartGameNotify\x18\x03 \x01(\x0b\x32\x18.gameMsg.StartGameNotify\x12-\n\rendGameNotify\x18\x04 \x01(\x0b\x32\x16.gameMsg.EndGameNotify\x12\x37\n\x12gameTimeTickNotify\x18\x05 \x01(\x0b\x32\x1b.gameMsg.GameTimeTickNotify\x12-\n\ruseToolNotify\x18\x06 \x01(\x0b\x32\x16.gameMsg.UseToolNotify\x12/\n\x0eoverTimeNotify\x18\x07 \x01(\x0b\x32\x17.gameMsg.OverTimeNotify\x12\x31\n\x0fplayBlockNotify\x18\x08 \x01(\x0b\x32\x18.gameMsg.PlayBlockNotify\"\x8e\x01\n\x03Msg\x12\x1e\n\x04type\x18\x01 \x02(\x0e\x32\x10.gameMsg.EnumMsg\x12!\n\x07request\x18\x02 \x01(\x0b\x32\x10.gameMsg.Request\x12#\n\x08response\x18\x03 \x01(\x0b\x32\x11.gameMsg.Response\x12\x1f\n\x06notify\x18\x04 \x01(\x0b\x32\x0f.gameMsg.Notify*\xde\x06\n\x07\x45numMsg\x12\x10\n\x0cloginrequest\x10\x01\x12\x11\n\rloginresponse\x10\x02\x12\x14\n\x10playbeginrequest\x10\x03\x12\x15\n\x11playbeginresponse\x10\x04\x12\x12\n\x0eplayendrequest\x10\x05\x12\x13\n\x0fplayendresponse\x10\x06\x12\x10\n\x0cseeadrequest\x10\x07\x12\x11\n\rseeadresponse\x10\x08\x12\x14\n\x10usepromptrequest\x10\t\x12\x15\n\x11usepromptresponse\x10\n\x12\x0f\n\x0brankrequest\x10\x0b\x12\x10\n\x0crankresponse\x10\x0c\x12\x15\n\x11\x63reateroomrequest\x10\r\x12\x16\n\x12\x63reateroomresponse\x10\x0e\x12\x13\n\x0fjoinroomrequest\x10\x0f\x12\x14\n\x10joinroomresponse\x10\x10\x12\x12\n\x0ejoinroomnotify\x10\x11\x12\x14\n\x10leaveroomrequest\x10\x12\x12\x15\n\x11leaveroomresponse\x10\x13\x12\x13\n\x0fleaveroomnotify\x10\x14\x12\x13\n\x0fstartgamenotify\x10\x15\x12\x12\n\x0e\x65ndgamerequest\x10\x16\x12\x13\n\x0f\x65ndgameresponse\x10\x17\x12\x11\n\rendgamenotify\x10\x18\x12\x16\n\x12gametimeticknotify\x10\x19\x12\x14\n\x10startgamerequest\x10\x1a\x12\x15\n\x11startgameresponse\x10\x1b\x12\x14\n\x10matchgamerequest\x10\x1c\x12\x15\n\x11matchgameresponse\x10\x1d\x12\x12\n\x0eusetoolrequest\x10\x1e\x12\x13\n\x0fusetoolresponse\x10\x1f\x12\x11\n\rusetoolnotify\x10 \x12\x12\n\x0eovertimenotify\x10!\x12\x0e\n\nbuyrequest\x10\"\x12\x0f\n\x0b\x62uyresponse\x10#\x12\x17\n\x13playblockaddrequest\x10$\x12\x18\n\x14playblockaddresponse\x10%\x12\x1a\n\x16playblockdeleterequest\x10&\x12\x1b\n\x17playblockdeleteresponse\x10\'\x12\x13\n\x0fplayblocknotify\x10(')
+  serialized_pb=_b('\n\tmsg.proto\x12\x07gameMsg\x1a\x0f\x65rrorcode.proto\x1a\x0blogin.proto\x1a\x10play_begin.proto\x1a\x0eplay_end.proto\x1a\x0csee_ad.proto\x1a\x10use_prompt.proto\x1a\nrank.proto\x1a\x11\x63reate_room.proto\x1a\x0fjoin_room.proto\x1a\x10leave_room.proto\x1a\x10start_game.proto\x1a\x0e\x65nd_game.proto\x1a\x0fgame_tick.proto\x1a\x0euse_tool.proto\x1a\tbuy.proto\x1a\x10play_block.proto\x1a\x0c\x61ssets.proto\"\xb9\x06\n\x07Request\x12+\n\x0cloginRequest\x18\x01 \x01(\x0b\x32\x15.gameMsg.LoginRequest\x12\x33\n\x10playBeginRequest\x18\x02 \x01(\x0b\x32\x19.gameMsg.PlayBeginRequest\x12/\n\x0eplayEndRequest\x18\x03 \x01(\x0b\x32\x17.gameMsg.PlayEndRequest\x12+\n\x0cseeAdRequest\x18\x04 \x01(\x0b\x32\x15.gameMsg.SeeAdRequest\x12\x33\n\x10usePromptRequest\x18\x05 \x01(\x0b\x32\x19.gameMsg.UsePromptRequest\x12)\n\x0brankRequest\x18\x06 \x01(\x0b\x32\x14.gameMsg.RankRequest\x12\x35\n\x11\x63reateRoomRequest\x18\x07 \x01(\x0b\x32\x1a.gameMsg.CreateRoomRequest\x12\x31\n\x0fjoinRoomRequest\x18\x08 \x01(\x0b\x32\x18.gameMsg.JoinRoomRequest\x12\x33\n\x10leaveRoomRequest\x18\t \x01(\x0b\x32\x19.gameMsg.LeaveRoomRequest\x12/\n\x0e\x65ndGameRequest\x18\n \x01(\x0b\x32\x17.gameMsg.EndGameRequest\x12\x33\n\x10startGameRequest\x18\x0b \x01(\x0b\x32\x19.gameMsg.StartGameRequest\x12\x33\n\x10matchGameRequest\x18\x0c \x01(\x0b\x32\x19.gameMsg.MatchGameRequest\x12/\n\x0euseToolRequest\x18\r \x01(\x0b\x32\x17.gameMsg.UseToolRequest\x12\'\n\nbuyRequest\x18\x0e \x01(\x0b\x32\x13.gameMsg.BuyRequest\x12\x39\n\x13playBlockAddRequest\x18\x0f \x01(\x0b\x32\x1c.gameMsg.PlayBlockAddRequest\x12?\n\x16playBlockDeleteRequest\x18\x10 \x01(\x0b\x32\x1f.gameMsg.PlayBlockDeleteRequest\"\x82\x07\n\x08Response\x12&\n\nnErrorCode\x18\x01 \x02(\x0e\x32\x12.gameMsg.ErrorCode\x12-\n\rloginResponse\x18\x02 \x01(\x0b\x32\x16.gameMsg.LoginResponse\x12\x35\n\x11playBeginResponse\x18\x03 \x01(\x0b\x32\x1a.gameMsg.PlayBeginResponse\x12\x31\n\x0fplayEndResponse\x18\x04 \x01(\x0b\x32\x18.gameMsg.PlayEndResponse\x12-\n\rseeAdResponse\x18\x05 \x01(\x0b\x32\x16.gameMsg.SeeAdResponse\x12\x35\n\x11usePromptResponse\x18\x06 \x01(\x0b\x32\x1a.gameMsg.UsePromptResponse\x12+\n\x0crankResponse\x18\x07 \x01(\x0b\x32\x15.gameMsg.RankResponse\x12\x37\n\x12\x63reateRoomResponse\x18\x08 \x01(\x0b\x32\x1b.gameMsg.CreateRoomResponse\x12\x33\n\x10joinRoomResponse\x18\t \x01(\x0b\x32\x19.gameMsg.JoinRoomResponse\x12\x35\n\x11leaveRoomResponse\x18\n \x01(\x0b\x32\x1a.gameMsg.LeaveRoomResponse\x12\x31\n\x0f\x65ndGameResponse\x18\x0b \x01(\x0b\x32\x18.gameMsg.EndGameResponse\x12\x35\n\x11startGameResponse\x18\x0c \x01(\x0b\x32\x1a.gameMsg.StartGameResponse\x12\x35\n\x11matchGameResponse\x18\r \x01(\x0b\x32\x1a.gameMsg.MatchGameResponse\x12\x31\n\x0fuseToolResponse\x18\x0e \x01(\x0b\x32\x18.gameMsg.UseToolResponse\x12)\n\x0b\x62uyResponse\x18\x0f \x01(\x0b\x32\x14.gameMsg.BuyResponse\x12;\n\x14playBlockAddResponse\x18\x10 \x01(\x0b\x32\x1d.gameMsg.PlayBlockAddResponse\x12\x41\n\x17playBlockDeleteResponse\x18\x11 \x01(\x0b\x32 .gameMsg.PlayBlockDeleteResponse\"\xc5\x03\n\x06Notify\x12/\n\x0ejoinRoomNotify\x18\x01 \x01(\x0b\x32\x17.gameMsg.JoinRoomNotify\x12\x31\n\x0fleaveRoomNotify\x18\x02 \x01(\x0b\x32\x18.gameMsg.LeaveRoomNotify\x12\x31\n\x0fstartGameNotify\x18\x03 \x01(\x0b\x32\x18.gameMsg.StartGameNotify\x12-\n\rendGameNotify\x18\x04 \x01(\x0b\x32\x16.gameMsg.EndGameNotify\x12\x37\n\x12gameTimeTickNotify\x18\x05 \x01(\x0b\x32\x1b.gameMsg.GameTimeTickNotify\x12-\n\ruseToolNotify\x18\x06 \x01(\x0b\x32\x16.gameMsg.UseToolNotify\x12/\n\x0eoverTimeNotify\x18\x07 \x01(\x0b\x32\x17.gameMsg.OverTimeNotify\x12\x31\n\x0fplayBlockNotify\x18\x08 \x01(\x0b\x32\x18.gameMsg.PlayBlockNotify\x12)\n\x0b\x61ssetUpdate\x18\t \x01(\x0b\x32\x14.gameMsg.AssetUpdate\"\x8e\x01\n\x03Msg\x12\x1e\n\x04type\x18\x01 \x02(\x0e\x32\x10.gameMsg.EnumMsg\x12!\n\x07request\x18\x02 \x01(\x0b\x32\x10.gameMsg.Request\x12#\n\x08response\x18\x03 \x01(\x0b\x32\x11.gameMsg.Response\x12\x1f\n\x06notify\x18\x04 \x01(\x0b\x32\x0f.gameMsg.Notify*\xef\x06\n\x07\x45numMsg\x12\x10\n\x0cloginrequest\x10\x01\x12\x11\n\rloginresponse\x10\x02\x12\x14\n\x10playbeginrequest\x10\x03\x12\x15\n\x11playbeginresponse\x10\x04\x12\x12\n\x0eplayendrequest\x10\x05\x12\x13\n\x0fplayendresponse\x10\x06\x12\x10\n\x0cseeadrequest\x10\x07\x12\x11\n\rseeadresponse\x10\x08\x12\x14\n\x10usepromptrequest\x10\t\x12\x15\n\x11usepromptresponse\x10\n\x12\x0f\n\x0brankrequest\x10\x0b\x12\x10\n\x0crankresponse\x10\x0c\x12\x15\n\x11\x63reateroomrequest\x10\r\x12\x16\n\x12\x63reateroomresponse\x10\x0e\x12\x13\n\x0fjoinroomrequest\x10\x0f\x12\x14\n\x10joinroomresponse\x10\x10\x12\x12\n\x0ejoinroomnotify\x10\x11\x12\x14\n\x10leaveroomrequest\x10\x12\x12\x15\n\x11leaveroomresponse\x10\x13\x12\x13\n\x0fleaveroomnotify\x10\x14\x12\x13\n\x0fstartgamenotify\x10\x15\x12\x12\n\x0e\x65ndgamerequest\x10\x16\x12\x13\n\x0f\x65ndgameresponse\x10\x17\x12\x11\n\rendgamenotify\x10\x18\x12\x16\n\x12gametimeticknotify\x10\x19\x12\x14\n\x10startgamerequest\x10\x1a\x12\x15\n\x11startgameresponse\x10\x1b\x12\x14\n\x10matchgamerequest\x10\x1c\x12\x15\n\x11matchgameresponse\x10\x1d\x12\x12\n\x0eusetoolrequest\x10\x1e\x12\x13\n\x0fusetoolresponse\x10\x1f\x12\x11\n\rusetoolnotify\x10 \x12\x12\n\x0eovertimenotify\x10!\x12\x0e\n\nbuyrequest\x10\"\x12\x0f\n\x0b\x62uyresponse\x10#\x12\x17\n\x13playblockaddrequest\x10$\x12\x18\n\x14playblockaddresponse\x10%\x12\x1a\n\x16playblockdeleterequest\x10&\x12\x1b\n\x17playblockdeleteresponse\x10\'\x12\x13\n\x0fplayblocknotify\x10(\x12\x0f\n\x0b\x61ssetupdate\x10)')
   ,
-  dependencies=[errorcode__pb2.DESCRIPTOR,login__pb2.DESCRIPTOR,play__begin__pb2.DESCRIPTOR,play__end__pb2.DESCRIPTOR,see__ad__pb2.DESCRIPTOR,use__prompt__pb2.DESCRIPTOR,rank__pb2.DESCRIPTOR,create__room__pb2.DESCRIPTOR,join__room__pb2.DESCRIPTOR,leave__room__pb2.DESCRIPTOR,start__game__pb2.DESCRIPTOR,end__game__pb2.DESCRIPTOR,game__tick__pb2.DESCRIPTOR,use__tool__pb2.DESCRIPTOR,buy__pb2.DESCRIPTOR,play__block__pb2.DESCRIPTOR,])
+  dependencies=[errorcode__pb2.DESCRIPTOR,login__pb2.DESCRIPTOR,play__begin__pb2.DESCRIPTOR,play__end__pb2.DESCRIPTOR,see__ad__pb2.DESCRIPTOR,use__prompt__pb2.DESCRIPTOR,rank__pb2.DESCRIPTOR,create__room__pb2.DESCRIPTOR,join__room__pb2.DESCRIPTOR,leave__room__pb2.DESCRIPTOR,start__game__pb2.DESCRIPTOR,end__game__pb2.DESCRIPTOR,game__tick__pb2.DESCRIPTOR,use__tool__pb2.DESCRIPTOR,buy__pb2.DESCRIPTOR,play__block__pb2.DESCRIPTOR,assets__pb2.DESCRIPTOR,])
 
 _ENUMMSG = _descriptor.EnumDescriptor(
   name='EnumMsg',
@@ -206,11 +207,15 @@ _ENUMMSG = _descriptor.EnumDescriptor(
       name='playblocknotify', index=39, number=40,
       options=None,
       type=None),
+    _descriptor.EnumValueDescriptor(
+      name='assetupdate', index=40, number=41,
+      options=None,
+      type=None),
   ],
   containing_type=None,
   options=None,
-  serialized_start=2568,
-  serialized_end=3430,
+  serialized_start=2625,
+  serialized_end=3504,
 )
 _sym_db.RegisterEnumDescriptor(_ENUMMSG)
 
@@ -255,6 +260,7 @@ playblockaddresponse = 37
 playblockdeleterequest = 38
 playblockdeleteresponse = 39
 playblocknotify = 40
+assetupdate = 41
 
 
 
@@ -389,8 +395,8 @@ _REQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=281,
-  serialized_end=1106,
+  serialized_start=295,
+  serialized_end=1120,
 )
 
 
@@ -532,8 +538,8 @@ _RESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1109,
-  serialized_end=2007,
+  serialized_start=1123,
+  serialized_end=2021,
 )
 
 
@@ -600,6 +606,13 @@ _NOTIFY = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
+    _descriptor.FieldDescriptor(
+      name='assetUpdate', full_name='gameMsg.Notify.assetUpdate', index=8,
+      number=9, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
   ],
   extensions=[
   ],
@@ -612,8 +625,8 @@ _NOTIFY = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2010,
-  serialized_end=2420,
+  serialized_start=2024,
+  serialized_end=2477,
 )
 
 
@@ -664,8 +677,8 @@ _MSG = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2423,
-  serialized_end=2565,
+  serialized_start=2480,
+  serialized_end=2622,
 )
 
 _REQUEST.fields_by_name['loginRequest'].message_type = login__pb2._LOGINREQUEST
@@ -709,6 +722,7 @@ _NOTIFY.fields_by_name['gameTimeTickNotify'].message_type = game__tick__pb2._GAM
 _NOTIFY.fields_by_name['useToolNotify'].message_type = use__tool__pb2._USETOOLNOTIFY
 _NOTIFY.fields_by_name['overTimeNotify'].message_type = end__game__pb2._OVERTIMENOTIFY
 _NOTIFY.fields_by_name['playBlockNotify'].message_type = play__block__pb2._PLAYBLOCKNOTIFY
+_NOTIFY.fields_by_name['assetUpdate'].message_type = assets__pb2._ASSETUPDATE
 _MSG.fields_by_name['type'].enum_type = _ENUMMSG
 _MSG.fields_by_name['request'].message_type = _REQUEST
 _MSG.fields_by_name['response'].message_type = _RESPONSE

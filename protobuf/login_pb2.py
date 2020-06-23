@@ -19,7 +19,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   name='login.proto',
   package='gameMsg',
   syntax='proto2',
-  serialized_pb=_b('\n\x0blogin.proto\x12\x07gameMsg\"f\n\x04User\x12\x0f\n\x07nUserID\x18\x01 \x02(\t\x12\r\n\x05sNick\x18\x02 \x01(\t\x12\x0c\n\x04nExp\x18\x03 \x01(\x05\x12\r\n\x05nGold\x18\x04 \x01(\x05\x12\x10\n\x08sHeadimg\x18\x05 \x01(\t\x12\x0f\n\x07starNum\x18\x06 \x01(\x05\"#\n\x04Gate\x12\n\n\x02id\x18\x01 \x02(\x05\x12\x0f\n\x07starNum\x18\x02 \x02(\x05\"\x81\x01\n\x0cLoginRequest\x12\x0b\n\x03sID\x18\x01 \x02(\t\x12\r\n\x05sNick\x18\x02 \x01(\t\x12\x10\n\x08sHeadimg\x18\x03 \x01(\t\x12\r\n\x05sCity\x18\x04 \x01(\t\x12\x0f\n\x07nGender\x18\x05 \x01(\x05\x12\x11\n\tsProvince\x18\x06 \x01(\t\x12\x10\n\x08sCountry\x18\x07 \x01(\t\"\xdb\x01\n\rLoginResponse\x12 \n\trequester\x18\x01 \x01(\x0b\x32\r.gameMsg.User\x12\x1c\n\x05gates\x18\x02 \x03(\x0b\x32\r.gameMsg.Gate\x12\x0c\n\x04nExp\x18\x03 \x01(\x05\x12\r\n\x05nGold\x18\x04 \x01(\x05\x12\x12\n\nnTotalStar\x18\x05 \x01(\x05\x12\x12\n\nnTotalGate\x18\x06 \x01(\x05\x12\x13\n\x0bnServerTime\x18\x07 \x01(\x05\x12\x0e\n\x06\x62SeeAd\x18\x08 \x01(\x08\x12\x0e\n\x06\x62Share\x18\t \x01(\x08\x12\x10\n\x08\x62GetTips\x18\n \x01(\x08')
+  serialized_pb=_b('\n\x0blogin.proto\x12\x07gameMsg\"~\n\x04User\x12\x0f\n\x07nUserID\x18\x01 \x02(\x05\x12\r\n\x05nGold\x18\x02 \x01(\x05\x12\x13\n\x0bnSeeAdTimes\x18\x03 \x01(\x05\x12\x13\n\x0bnShareTimes\x18\x04 \x01(\x05\x12\x15\n\rnGetTipsTimes\x18\x05 \x01(\x05\x12\x15\n\rnPopaddsTimes\x18\x06 \x01(\x05\"#\n\x04Gate\x12\n\n\x02id\x18\x01 \x02(\x05\x12\x0f\n\x07starNum\x18\x02 \x02(\x05\"\x81\x01\n\x0cLoginRequest\x12\x0b\n\x03sID\x18\x01 \x02(\t\x12\r\n\x05sNick\x18\x02 \x01(\t\x12\x10\n\x08sHeadimg\x18\x03 \x01(\t\x12\r\n\x05sCity\x18\x04 \x01(\t\x12\x0f\n\x07nGender\x18\x05 \x01(\x05\x12\x11\n\tsProvince\x18\x06 \x01(\t\x12\x10\n\x08sCountry\x18\x07 \x01(\t\"d\n\rLoginResponse\x12 \n\trequester\x18\x01 \x02(\x0b\x32\r.gameMsg.User\x12\x1c\n\x05gates\x18\x02 \x03(\x0b\x32\r.gameMsg.Gate\x12\x13\n\x0bnServerTime\x18\x03 \x02(\x05')
 )
 
 
@@ -34,41 +34,41 @@ _USER = _descriptor.Descriptor(
   fields=[
     _descriptor.FieldDescriptor(
       name='nUserID', full_name='gameMsg.User.nUserID', index=0,
-      number=1, type=9, cpp_type=9, label=2,
-      has_default_value=False, default_value=_b("").decode('utf-8'),
+      number=1, type=5, cpp_type=1, label=2,
+      has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='sNick', full_name='gameMsg.User.sNick', index=1,
-      number=2, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=_b("").decode('utf-8'),
+      name='nGold', full_name='gameMsg.User.nGold', index=1,
+      number=2, type=5, cpp_type=1, label=1,
+      has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='nExp', full_name='gameMsg.User.nExp', index=2,
+      name='nSeeAdTimes', full_name='gameMsg.User.nSeeAdTimes', index=2,
       number=3, type=5, cpp_type=1, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='nGold', full_name='gameMsg.User.nGold', index=3,
+      name='nShareTimes', full_name='gameMsg.User.nShareTimes', index=3,
       number=4, type=5, cpp_type=1, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='sHeadimg', full_name='gameMsg.User.sHeadimg', index=4,
-      number=5, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=_b("").decode('utf-8'),
+      name='nGetTipsTimes', full_name='gameMsg.User.nGetTipsTimes', index=4,
+      number=5, type=5, cpp_type=1, label=1,
+      has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='starNum', full_name='gameMsg.User.starNum', index=5,
+      name='nPopaddsTimes', full_name='gameMsg.User.nPopaddsTimes', index=5,
       number=6, type=5, cpp_type=1, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
@@ -87,7 +87,7 @@ _USER = _descriptor.Descriptor(
   oneofs=[
   ],
   serialized_start=24,
-  serialized_end=126,
+  serialized_end=150,
 )
 
 
@@ -124,8 +124,8 @@ _GATE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=128,
-  serialized_end=163,
+  serialized_start=152,
+  serialized_end=187,
 )
 
 
@@ -197,8 +197,8 @@ _LOGINREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=166,
-  serialized_end=295,
+  serialized_start=190,
+  serialized_end=319,
 )
 
 
@@ -211,7 +211,7 @@ _LOGINRESPONSE = _descriptor.Descriptor(
   fields=[
     _descriptor.FieldDescriptor(
       name='requester', full_name='gameMsg.LoginResponse.requester', index=0,
-      number=1, type=11, cpp_type=10, label=1,
+      number=1, type=11, cpp_type=10, label=2,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -224,58 +224,9 @@ _LOGINRESPONSE = _descriptor.Descriptor(
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='nExp', full_name='gameMsg.LoginResponse.nExp', index=2,
-      number=3, type=5, cpp_type=1, label=1,
+      name='nServerTime', full_name='gameMsg.LoginResponse.nServerTime', index=2,
+      number=3, type=5, cpp_type=1, label=2,
       has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='nGold', full_name='gameMsg.LoginResponse.nGold', index=3,
-      number=4, type=5, cpp_type=1, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='nTotalStar', full_name='gameMsg.LoginResponse.nTotalStar', index=4,
-      number=5, type=5, cpp_type=1, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='nTotalGate', full_name='gameMsg.LoginResponse.nTotalGate', index=5,
-      number=6, type=5, cpp_type=1, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='nServerTime', full_name='gameMsg.LoginResponse.nServerTime', index=6,
-      number=7, type=5, cpp_type=1, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='bSeeAd', full_name='gameMsg.LoginResponse.bSeeAd', index=7,
-      number=8, type=8, cpp_type=7, label=1,
-      has_default_value=False, default_value=False,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='bShare', full_name='gameMsg.LoginResponse.bShare', index=8,
-      number=9, type=8, cpp_type=7, label=1,
-      has_default_value=False, default_value=False,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='bGetTips', full_name='gameMsg.LoginResponse.bGetTips', index=9,
-      number=10, type=8, cpp_type=7, label=1,
-      has_default_value=False, default_value=False,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
@@ -291,8 +242,8 @@ _LOGINRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=298,
-  serialized_end=517,
+  serialized_start=321,
+  serialized_end=421,
 )
 
 _LOGINRESPONSE.fields_by_name['requester'].message_type = _USER

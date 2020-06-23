@@ -16,6 +16,7 @@ import "game_tick.proto";
 import "use_tool.proto";
 import "buy.proto";
 import "play_block.proto";
+import "assets.proto";
 
 
 enum EnumMsg {
@@ -59,6 +60,7 @@ enum EnumMsg {
   playblockdeleterequest= 38;
   playblockdeleteresponse= 39;
   playblocknotify= 40;
+  assetupdate=41;
 }
 
 message Request {//请求协议
@@ -109,6 +111,7 @@ message Notify {//通知协议
   optional UseToolNotify useToolNotify = 6;
   optional OverTimeNotify overTimeNotify = 7;
   optional PlayBlockNotify playBlockNotify = 8;
+  optional AssetUpdate assetUpdate=9;
 }
 
 message Msg {//消息

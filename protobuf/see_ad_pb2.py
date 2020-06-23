@@ -19,7 +19,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   name='see_ad.proto',
   package='gameMsg',
   syntax='proto2',
-  serialized_pb=_b('\n\x0csee_ad.proto\x12\x07gameMsg\")\n\x0cSeeAdRequest\x12\x0b\n\x03sID\x18\x01 \x02(\t\x12\x0c\n\x04\x61\x64ID\x18\x02 \x02(\x05\" \n\rSeeAdResponse\x12\x0f\n\x07nPrompt\x18\x01 \x01(\x05')
+  serialized_pb=_b('\n\x0csee_ad.proto\x12\x07gameMsg\"9\n\x0cSeeAdRequest\x12\x0b\n\x03nID\x18\x01 \x02(\x05\x12\r\n\x05nType\x18\x02 \x02(\x05\x12\r\n\x05nGlod\x18\x03 \x01(\x05\"=\n\rSeeAdResponse\x12\r\n\x05nType\x18\x01 \x02(\x05\x12\x0e\n\x06nTimes\x18\x02 \x01(\x05\x12\r\n\x05nGlod\x18\x03 \x01(\x05')
 )
 
 
@@ -33,15 +33,22 @@ _SEEADREQUEST = _descriptor.Descriptor(
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='sID', full_name='gameMsg.SeeAdRequest.sID', index=0,
-      number=1, type=9, cpp_type=9, label=2,
-      has_default_value=False, default_value=_b("").decode('utf-8'),
+      name='nID', full_name='gameMsg.SeeAdRequest.nID', index=0,
+      number=1, type=5, cpp_type=1, label=2,
+      has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='adID', full_name='gameMsg.SeeAdRequest.adID', index=1,
+      name='nType', full_name='gameMsg.SeeAdRequest.nType', index=1,
       number=2, type=5, cpp_type=1, label=2,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='nGlod', full_name='gameMsg.SeeAdRequest.nGlod', index=2,
+      number=3, type=5, cpp_type=1, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -59,7 +66,7 @@ _SEEADREQUEST = _descriptor.Descriptor(
   oneofs=[
   ],
   serialized_start=25,
-  serialized_end=66,
+  serialized_end=82,
 )
 
 
@@ -71,8 +78,22 @@ _SEEADRESPONSE = _descriptor.Descriptor(
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='nPrompt', full_name='gameMsg.SeeAdResponse.nPrompt', index=0,
-      number=1, type=5, cpp_type=1, label=1,
+      name='nType', full_name='gameMsg.SeeAdResponse.nType', index=0,
+      number=1, type=5, cpp_type=1, label=2,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='nTimes', full_name='gameMsg.SeeAdResponse.nTimes', index=1,
+      number=2, type=5, cpp_type=1, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='nGlod', full_name='gameMsg.SeeAdResponse.nGlod', index=2,
+      number=3, type=5, cpp_type=1, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -89,8 +110,8 @@ _SEEADRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=68,
-  serialized_end=100,
+  serialized_start=84,
+  serialized_end=145,
 )
 
 DESCRIPTOR.message_types_by_name['SeeAdRequest'] = _SEEADREQUEST

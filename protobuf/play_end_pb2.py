@@ -20,7 +20,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   name='play_end.proto',
   package='gameMsg',
   syntax='proto2',
-  serialized_pb=_b('\n\x0eplay_end.proto\x12\x07gameMsg\x1a\x0blogin.proto\"-\n\x0ePlayEndRequest\x12\x0b\n\x03sID\x18\x01 \x02(\t\x12\x0e\n\x06gateID\x18\x02 \x02(\x05\"e\n\x0fPlayEndResponse\x12\x0e\n\x06gateID\x18\x01 \x02(\x05\x12\x10\n\x08nTopStar\x18\x02 \x01(\x05\x12\x12\n\nnTotalStar\x18\x03 \x01(\x05\x12\x1c\n\x05gates\x18\x04 \x03(\x0b\x32\r.gameMsg.Gate')
+  serialized_pb=_b('\n\x0eplay_end.proto\x12\x07gameMsg\x1a\x0blogin.proto\"-\n\x0ePlayEndRequest\x12\x0b\n\x03sID\x18\x01 \x02(\t\x12\x0e\n\x06gateID\x18\x02 \x02(\x05\"r\n\x0fPlayEndResponse\x12\x0e\n\x06gateID\x18\x01 \x02(\x05\x12\x10\n\x08nTopStar\x18\x02 \x01(\x05\x12\x10\n\x08nGetGold\x18\x03 \x01(\x05\x12\r\n\x05nGold\x18\x04 \x01(\x05\x12\x1c\n\x05gates\x18\x05 \x03(\x0b\x32\r.gameMsg.Gate')
   ,
   dependencies=[login__pb2.DESCRIPTOR,])
 
@@ -87,15 +87,22 @@ _PLAYENDRESPONSE = _descriptor.Descriptor(
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='nTotalStar', full_name='gameMsg.PlayEndResponse.nTotalStar', index=2,
+      name='nGetGold', full_name='gameMsg.PlayEndResponse.nGetGold', index=2,
       number=3, type=5, cpp_type=1, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='gates', full_name='gameMsg.PlayEndResponse.gates', index=3,
-      number=4, type=11, cpp_type=10, label=3,
+      name='nGold', full_name='gameMsg.PlayEndResponse.nGold', index=3,
+      number=4, type=5, cpp_type=1, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='gates', full_name='gameMsg.PlayEndResponse.gates', index=4,
+      number=5, type=11, cpp_type=10, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -113,7 +120,7 @@ _PLAYENDRESPONSE = _descriptor.Descriptor(
   oneofs=[
   ],
   serialized_start=87,
-  serialized_end=188,
+  serialized_end=201,
 )
 
 _PLAYENDRESPONSE.fields_by_name['gates'].message_type = login__pb2._GATE
