@@ -45,14 +45,15 @@ class LoginHandler(BaseHandler):
         if user == None:
             Utils().logDebug("创建新用户:" + str(nick) + " ; openid:" + str(username))
             # 新用户默认第一关解锁
-            newgate = Gateinfo(gid=1, uid=username, gatestar=0, state=1)
-            gid = Dal_Gateinfo().addGateinfo(newgate)
             nowtime = Utils().dbTimeCreate()
             user = User(id=None, username=username, nickname=nick, headimgurl=headimg, \
-                        tips=0, gates=str(gid), sex=gender, city=city, country=country, province=province, \
+                        tips=0, gates="", sex=gender, city=city, country=country, province=province, \
                         unionid="", dtips=0, ranklevel=0, gold=0, money=0, goods="", tipstime=nowtime, ads=0, \
                         adtime=nowtime, shares=0, sharetime=nowtime, popadds=0, popaddtime=nowtime)
             Dal_User().addUser(user)
+            newgate = Gateinfo(gid=1, uid=user.id, gatestar=0, state=1)
+            gid = Dal_Gateinfo().addGateinfo(newgate)
+            Dal_User().openNewGates(user.id, [gid])
 
         if nick != "" and nick != user.nickname:
             user.nickname = nick

@@ -124,11 +124,7 @@ class PlayGameHandler(BaseHandler):
                     newid = Dal_Gateinfo().addGateinfo(newgate)
 
                     # 更新用户解锁关卡信息
-                    gates = Utils().decodeIDFormat(user.gates)
-                    gates.append(newid)
-                    user.gates = Utils().encodeIDFormat(gates)
-                    kwargs = {"gates": user.gates}
-                    Dal_User().uqdateUser(user.id, **kwargs)
+                    Dal_User().openNewGates(user.id, [newid])
 
         gates = Dal_User().getUserGates(user.id)
         for index, id in enumerate(gates):
