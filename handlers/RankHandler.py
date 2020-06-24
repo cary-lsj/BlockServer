@@ -26,22 +26,16 @@ class RankHandler(BaseHandler):
 
         msgResp.response.nErrorCode = config_error['success']
 
-        uid = request.sID
-
-        user = Dal_User().getUser(uid)
-        if user == None:
-            msgResp.response.nErrorCode = config_error['userinvaild']
-        else:
-            rankDatas = Dal_User().getRankCache()
-            for index, uid in enumerate(rankDatas):
-                user = Dal_User().getUser(uid)
-                if user:
-                    respData = response.rankDatas.add()
-                    respData.id = int(uid)
-                    respData.sNick = user.nickname
-                    respData.nRank = index
-                    respData.starNum = Dal_User().getUserTopGateStar(uid)
-                    respData.sHeadimg = user.headimgurl
+        rankDatas = Dal_User().getRankCache()
+        for index, uid in enumerate(rankDatas):
+            user = Dal_User().getUser(uid)
+            if user:
+                respData = response.rankDatas.add()
+                respData.id = int(uid)
+                respData.sNick = user.nickname
+                respData.nRank = index
+                respData.starNum = Dal_User().getUserTopGateStar(uid)
+                respData.sHeadimg = user.headimgurl
 
         data = msgResp.SerializeToString()
         self.write(data)

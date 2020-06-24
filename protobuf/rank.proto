@@ -9,7 +9,7 @@ message RankData{//排行数据
 }
 
 message RankRequest {//排行请求协议
-  required string sID = 1;//用户id，微信openid
+
 }
 
 message RankResponse {//排行响应协议

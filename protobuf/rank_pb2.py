@@ -19,7 +19,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   name='rank.proto',
   package='gameMsg',
   syntax='proto2',
-  serialized_pb=_b('\n\nrank.proto\x12\x07gameMsg\"W\n\x08RankData\x12\n\n\x02id\x18\x01 \x02(\x05\x12\r\n\x05sNick\x18\x02 \x02(\t\x12\r\n\x05nRank\x18\x03 \x02(\x05\x12\x0f\n\x07starNum\x18\x04 \x02(\x05\x12\x10\n\x08sHeadimg\x18\x05 \x02(\t\"\x1a\n\x0bRankRequest\x12\x0b\n\x03sID\x18\x01 \x02(\t\"4\n\x0cRankResponse\x12$\n\trankDatas\x18\x01 \x03(\x0b\x32\x11.gameMsg.RankData')
+  serialized_pb=_b('\n\nrank.proto\x12\x07gameMsg\"W\n\x08RankData\x12\n\n\x02id\x18\x01 \x02(\x05\x12\r\n\x05sNick\x18\x02 \x02(\t\x12\r\n\x05nRank\x18\x03 \x02(\x05\x12\x0f\n\x07starNum\x18\x04 \x02(\x05\x12\x10\n\x08sHeadimg\x18\x05 \x02(\t\"\r\n\x0bRankRequest\"4\n\x0cRankResponse\x12$\n\trankDatas\x18\x01 \x03(\x0b\x32\x11.gameMsg.RankData')
 )
 
 
@@ -91,13 +91,6 @@ _RANKREQUEST = _descriptor.Descriptor(
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
-    _descriptor.FieldDescriptor(
-      name='sID', full_name='gameMsg.RankRequest.sID', index=0,
-      number=1, type=9, cpp_type=9, label=2,
-      has_default_value=False, default_value=_b("").decode('utf-8'),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
   ],
   extensions=[
   ],
@@ -111,7 +104,7 @@ _RANKREQUEST = _descriptor.Descriptor(
   oneofs=[
   ],
   serialized_start=112,
-  serialized_end=138,
+  serialized_end=125,
 )
 
 
@@ -141,8 +134,8 @@ _RANKRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=140,
-  serialized_end=192,
+  serialized_start=127,
+  serialized_end=179,
 )
 
 _RANKRESPONSE.fields_by_name['rankDatas'].message_type = _RANKDATA
