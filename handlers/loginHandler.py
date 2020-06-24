@@ -37,10 +37,9 @@ class LoginHandler(BaseHandler):
 
         user = Dal_User().getLoginUser(username)
         if user == None:
-            Utils().logDebug("创建新用户:" + str(nick) + " ; openid:" + str(username))
             # 新用户默认第一关解锁
             nowtime = Utils().dbTimeCreate()
-            user = User(id=None, username=username, nickname=nick, headimgurl="", \
+            user = User(id=None, username=username, nickname="", headimgurl="", \
                         tips=0, gates="", sex=0, city="", country="", province="", \
                         unionid="", dtips=0, ranklevel=0, gold=0, money=0, goods="", tipstime=nowtime, ads=0, \
                         adtime=nowtime, shares=0, sharetime=nowtime, popadds=0, popaddtime=nowtime)

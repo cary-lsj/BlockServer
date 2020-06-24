@@ -45,6 +45,7 @@ class UploadInfoHandler(BaseHandler):
         if user:
             if nickname != "" and nickname != user.nickname:
                 user.nickname = nickname
+                Utils().logDebug("创建新用户:" + str(nickname) + " ; openid:" + str(user.username))
                 kwargs = {"nickname": user.nickname}
                 Dal_User().uqdateUser(user.id, **kwargs)
             if headimgurl != "" and headimgurl != user.headimgurl:
