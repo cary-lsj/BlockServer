@@ -27,7 +27,10 @@ class Dal_User(Dal_base):
     ## 查
     def getUser(self, pk):
         pk = int(pk)
-        return self.get(pk, User)
+        for k, v in self._m_cache.iteritems():
+            if v.id == pk:
+                return v
+        return None
 
     def getLoginUser(self, username):
         username = str(username)
