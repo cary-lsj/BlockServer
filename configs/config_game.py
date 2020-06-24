@@ -43,19 +43,19 @@ config_game = {
     'endCalc': {
         'baseGold': 10  # 基础结算金币
     },
-    "timeShreeStar": 60,  # 三星倒计时间 秒
-    "timeTwoStar": 180,  # 二星倒计时间 秒
-    "timeOneStar": 300,  # 一星倒计时间 秒
+    "timeShreeStar": 45,  # 三星倒计时间 秒
+    "timeTwoStar": 135,  # 二星倒计时间 秒
+    "timeOneStar": 225,  # 一星倒计时间 秒
     "seeVideoAdTimes": 5,  # 每天看视频广告的次数
     "shareTimes": 5,  # 每天看分享得提示次数
     "seePopAdTimes": 5,  # 每天自动弹出广告的次数
     "goldStar": {
         0: 0,
-        1: 50,  # 第一颗星奖励
+        1: 25,  # 第一颗星奖励
         2: 50,  # 第二颗星奖励
-        3: 150,  # 第三颗星奖励
+        3: 75,  # 第三颗星奖励
     },
-    "goldPlayEnd": 100,
+    "goldPlayEnd": 10,  # 重复刷关卡给的奖励
     "buyTipPrice": 100,  # 购买一次提示消耗的金币
     "goldShare": 100,  # 分享一次 获得奖励
     "goldSeeAd": 100,  # 看一次视频广告 获得奖励
