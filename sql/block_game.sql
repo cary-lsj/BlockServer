@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50726
 File Encoding         : 65001
 
-Date: 2020-06-21 16:14:29
+Date: 2020-06-23 20:41:29
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -26,7 +26,11 @@ CREATE TABLE `gateinfo` (
   `gatestar` tinyint(1) DEFAULT '0',
   `state` tinyint(1) DEFAULT '0' COMMENT '未解锁：0 ， 已解锁：1 ，已通关：2',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=528 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Records of gateinfo
+-- ----------------------------
 
 -- ----------------------------
 -- Table structure for operated
@@ -41,11 +45,16 @@ CREATE TABLE `operated` (
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 -- ----------------------------
+-- Records of operated
+-- ----------------------------
+
+-- ----------------------------
 -- Table structure for userinfo
 -- ----------------------------
 DROP TABLE IF EXISTS `userinfo`;
 CREATE TABLE `userinfo` (
-  `id` varchar(32) NOT NULL DEFAULT '',
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `username` varchar(256) DEFAULT '',
   `nickname` varchar(256) DEFAULT '',
   `headimgurl` varchar(1024) DEFAULT '',
   `sex` tinyint(1) DEFAULT '0',
@@ -61,11 +70,15 @@ CREATE TABLE `userinfo` (
   `money` int(11) DEFAULT '0' COMMENT '钻石（人民币）',
   `goods` varchar(4096) DEFAULT '' COMMENT '个人物品, id:count;id:count',
   `tipstime` timestamp NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP COMMENT '获取提示的时间',
-  `ads` int(255) unsigned zerofill DEFAULT NULL COMMENT '看视频广告的次数',
+  `ads` int(11) unsigned zerofill DEFAULT '00000000000' COMMENT '看视频广告的次数',
   `adtime` timestamp NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP COMMENT '看视频广告的时间',
-  `shares` int(11) unsigned zerofill DEFAULT NULL COMMENT '分享的次数',
+  `shares` int(11) unsigned zerofill DEFAULT '00000000000' COMMENT '分享的次数',
   `sharetime` timestamp NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP COMMENT '分享的时间',
-  `popadds` int(11) unsigned zerofill DEFAULT NULL COMMENT '弹出式广告',
+  `popadds` int(11) unsigned zerofill DEFAULT '00000000000' COMMENT '弹出式广告',
   `popaddtime` timestamp NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP COMMENT '弹出式广告时间',
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Records of userinfo
+-- ----------------------------

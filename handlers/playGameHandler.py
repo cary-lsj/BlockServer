@@ -81,6 +81,7 @@ class PlayGameHandler(BaseHandler):
                 gateinfo = Dal_User().getGateInfoByGateID(user.id, gateID)
                 gatestar = 0
                 beginTime = self.get_begin_time(user.id)
+                useTime = 0
                 if beginTime != None:  # 没有记录开始时间按0星计算
                     useTime = int(time.time()) - beginTime
 
@@ -113,6 +114,7 @@ class PlayGameHandler(BaseHandler):
                 response.nTopStar = gatestar
                 response.nGetGold = new_get_gold
                 response.nGold = user.gold
+                response.nUseTime = useTime
 
                 # 如果当前玩的是玩家最大关卡，则解锁下一关卡
                 newGateID = int(gateID) + 1

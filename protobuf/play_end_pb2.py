@@ -20,7 +20,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   name='play_end.proto',
   package='gameMsg',
   syntax='proto2',
-  serialized_pb=_b('\n\x0eplay_end.proto\x12\x07gameMsg\x1a\x0blogin.proto\"-\n\x0ePlayEndRequest\x12\x0b\n\x03sID\x18\x01 \x02(\t\x12\x0e\n\x06gateID\x18\x02 \x02(\x05\"r\n\x0fPlayEndResponse\x12\x0e\n\x06gateID\x18\x01 \x02(\x05\x12\x10\n\x08nTopStar\x18\x02 \x01(\x05\x12\x10\n\x08nGetGold\x18\x03 \x01(\x05\x12\r\n\x05nGold\x18\x04 \x01(\x05\x12\x1c\n\x05gates\x18\x05 \x03(\x0b\x32\r.gameMsg.Gate')
+  serialized_pb=_b('\n\x0eplay_end.proto\x12\x07gameMsg\x1a\x0blogin.proto\"-\n\x0ePlayEndRequest\x12\x0b\n\x03sID\x18\x01 \x02(\t\x12\x0e\n\x06gateID\x18\x02 \x02(\x05\"\x84\x01\n\x0fPlayEndResponse\x12\x0e\n\x06gateID\x18\x01 \x02(\x05\x12\x10\n\x08nTopStar\x18\x02 \x01(\x05\x12\x10\n\x08nGetGold\x18\x03 \x01(\x05\x12\r\n\x05nGold\x18\x04 \x01(\x05\x12\x1c\n\x05gates\x18\x05 \x03(\x0b\x32\r.gameMsg.Gate\x12\x10\n\x08nUseTime\x18\x06 \x01(\x05')
   ,
   dependencies=[login__pb2.DESCRIPTOR,])
 
@@ -107,6 +107,13 @@ _PLAYENDRESPONSE = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
+    _descriptor.FieldDescriptor(
+      name='nUseTime', full_name='gameMsg.PlayEndResponse.nUseTime', index=5,
+      number=6, type=5, cpp_type=1, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
   ],
   extensions=[
   ],
@@ -119,8 +126,8 @@ _PLAYENDRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=87,
-  serialized_end=201,
+  serialized_start=88,
+  serialized_end=220,
 )
 
 _PLAYENDRESPONSE.fields_by_name['gates'].message_type = login__pb2._GATE

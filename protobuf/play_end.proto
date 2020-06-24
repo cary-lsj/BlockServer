@@ -13,5 +13,6 @@ message PlayEndResponse {//玩关卡结束响应协议
   optional int32 nGetGold = 3;//当前关卡获得的金币
   optional int32 nGold = 4;//玩家的金币
   repeated Gate gates = 5;//关卡信息，已经解锁的所有关卡
+  optional int32 nUseTime = 6;//玩家通关使用时间
 }
 
