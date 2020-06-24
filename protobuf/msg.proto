@@ -61,6 +61,7 @@ enum EnumMsg {
   playblockdeleteresponse= 39;
   playblocknotify= 40;
   assetupdate=41;
+  uploadinforequest=42;
 }
 
 message Request {//请求协议
@@ -80,6 +81,7 @@ message Request {//请求协议
   optional BuyRequest buyRequest = 14;
   optional PlayBlockAddRequest playBlockAddRequest = 15;
   optional PlayBlockDeleteRequest playBlockDeleteRequest = 16;
+  optional UploadInfoRequest uploadinforequest = 17;
 }
 
 message Response {//响应协议

@@ -8,6 +8,7 @@ from handlers.buyHandler import BuyHandler
 from handlers.loginHandler import LoginHandler
 from handlers.clientLogHandler import ClientLogHandler
 from handlers.playGameHandler import PlayGameHandler
+from handlers.uploadInfoHandler import UploadInfoHandler
 
 urls = [
     (r"/login", LoginHandler),
@@ -19,4 +20,5 @@ urls = [
     (r"/buy", BuyHandler),
     (r"/log", ClientLogHandler),
     (r"/palygame", PlayGameHandler),
+    (r"/uploadInfo", UploadInfoHandler),
 ]

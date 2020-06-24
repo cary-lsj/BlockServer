@@ -19,7 +19,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   name='login.proto',
   package='gameMsg',
   syntax='proto2',
-  serialized_pb=_b('\n\x0blogin.proto\x12\x07gameMsg\"~\n\x04User\x12\x0f\n\x07nUserID\x18\x01 \x02(\x05\x12\r\n\x05nGold\x18\x02 \x01(\x05\x12\x13\n\x0bnSeeAdTimes\x18\x03 \x01(\x05\x12\x13\n\x0bnShareTimes\x18\x04 \x01(\x05\x12\x15\n\rnGetTipsTimes\x18\x05 \x01(\x05\x12\x15\n\rnPopaddsTimes\x18\x06 \x01(\x05\"#\n\x04Gate\x12\n\n\x02id\x18\x01 \x02(\x05\x12\x0f\n\x07starNum\x18\x02 \x02(\x05\"\x81\x01\n\x0cLoginRequest\x12\x0b\n\x03sID\x18\x01 \x02(\t\x12\r\n\x05sNick\x18\x02 \x01(\t\x12\x10\n\x08sHeadimg\x18\x03 \x01(\t\x12\r\n\x05sCity\x18\x04 \x01(\t\x12\x0f\n\x07nGender\x18\x05 \x01(\x05\x12\x11\n\tsProvince\x18\x06 \x01(\t\x12\x10\n\x08sCountry\x18\x07 \x01(\t\"d\n\rLoginResponse\x12 \n\trequester\x18\x01 \x02(\x0b\x32\r.gameMsg.User\x12\x1c\n\x05gates\x18\x02 \x03(\x0b\x32\r.gameMsg.Gate\x12\x13\n\x0bnServerTime\x18\x03 \x02(\x05')
+  serialized_pb=_b('\n\x0blogin.proto\x12\x07gameMsg\"~\n\x04User\x12\x0f\n\x07nUserID\x18\x01 \x02(\x05\x12\r\n\x05nGold\x18\x02 \x01(\x05\x12\x13\n\x0bnSeeAdTimes\x18\x03 \x01(\x05\x12\x13\n\x0bnShareTimes\x18\x04 \x01(\x05\x12\x15\n\rnGetTipsTimes\x18\x05 \x01(\x05\x12\x15\n\rnPopaddsTimes\x18\x06 \x01(\x05\"#\n\x04Gate\x12\n\n\x02id\x18\x01 \x02(\x05\x12\x0f\n\x07starNum\x18\x02 \x02(\x05\"\x1b\n\x0cLoginRequest\x12\x0b\n\x03sID\x18\x01 \x02(\t\"d\n\rLoginResponse\x12 \n\trequester\x18\x01 \x02(\x0b\x32\r.gameMsg.User\x12\x1c\n\x05gates\x18\x02 \x03(\x0b\x32\r.gameMsg.Gate\x12\x13\n\x0bnServerTime\x18\x03 \x02(\x05\"\x86\x01\n\x11UploadInfoRequest\x12\x0b\n\x03sID\x18\x01 \x02(\t\x12\r\n\x05sNick\x18\x02 \x01(\t\x12\x10\n\x08sHeadimg\x18\x03 \x01(\t\x12\r\n\x05sCity\x18\x04 \x01(\t\x12\x0f\n\x07nGender\x18\x05 \x01(\x05\x12\x11\n\tsProvince\x18\x06 \x01(\t\x12\x10\n\x08sCountry\x18\x07 \x01(\t')
 )
 
 
@@ -143,48 +143,6 @@ _LOGINREQUEST = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
-    _descriptor.FieldDescriptor(
-      name='sNick', full_name='gameMsg.LoginRequest.sNick', index=1,
-      number=2, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=_b("").decode('utf-8'),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='sHeadimg', full_name='gameMsg.LoginRequest.sHeadimg', index=2,
-      number=3, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=_b("").decode('utf-8'),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='sCity', full_name='gameMsg.LoginRequest.sCity', index=3,
-      number=4, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=_b("").decode('utf-8'),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='nGender', full_name='gameMsg.LoginRequest.nGender', index=4,
-      number=5, type=5, cpp_type=1, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='sProvince', full_name='gameMsg.LoginRequest.sProvince', index=5,
-      number=6, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=_b("").decode('utf-8'),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='sCountry', full_name='gameMsg.LoginRequest.sCountry', index=6,
-      number=7, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=_b("").decode('utf-8'),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
   ],
   extensions=[
   ],
@@ -197,8 +155,8 @@ _LOGINREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=190,
-  serialized_end=319,
+  serialized_start=189,
+  serialized_end=216,
 )
 
 
@@ -242,8 +200,81 @@ _LOGINRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
+  serialized_start=218,
+  serialized_end=318,
+)
+
+
+_UPLOADINFOREQUEST = _descriptor.Descriptor(
+  name='UploadInfoRequest',
+  full_name='gameMsg.UploadInfoRequest',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='sID', full_name='gameMsg.UploadInfoRequest.sID', index=0,
+      number=1, type=9, cpp_type=9, label=2,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='sNick', full_name='gameMsg.UploadInfoRequest.sNick', index=1,
+      number=2, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='sHeadimg', full_name='gameMsg.UploadInfoRequest.sHeadimg', index=2,
+      number=3, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='sCity', full_name='gameMsg.UploadInfoRequest.sCity', index=3,
+      number=4, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='nGender', full_name='gameMsg.UploadInfoRequest.nGender', index=4,
+      number=5, type=5, cpp_type=1, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='sProvince', full_name='gameMsg.UploadInfoRequest.sProvince', index=5,
+      number=6, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='sCountry', full_name='gameMsg.UploadInfoRequest.sCountry', index=6,
+      number=7, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  syntax='proto2',
+  extension_ranges=[],
+  oneofs=[
+  ],
   serialized_start=321,
-  serialized_end=421,
+  serialized_end=455,
 )
 
 _LOGINRESPONSE.fields_by_name['requester'].message_type = _USER
@@ -252,6 +283,7 @@ DESCRIPTOR.message_types_by_name['User'] = _USER
 DESCRIPTOR.message_types_by_name['Gate'] = _GATE
 DESCRIPTOR.message_types_by_name['LoginRequest'] = _LOGINREQUEST
 DESCRIPTOR.message_types_by_name['LoginResponse'] = _LOGINRESPONSE
+DESCRIPTOR.message_types_by_name['UploadInfoRequest'] = _UPLOADINFOREQUEST
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 User = _reflection.GeneratedProtocolMessageType('User', (_message.Message,), dict(
@@ -281,6 +313,13 @@ LoginResponse = _reflection.GeneratedProtocolMessageType('LoginResponse', (_mess
   # @@protoc_insertion_point(class_scope:gameMsg.LoginResponse)
   ))
 _sym_db.RegisterMessage(LoginResponse)
+
+UploadInfoRequest = _reflection.GeneratedProtocolMessageType('UploadInfoRequest', (_message.Message,), dict(
+  DESCRIPTOR = _UPLOADINFOREQUEST,
+  __module__ = 'login_pb2'
+  # @@protoc_insertion_point(class_scope:gameMsg.UploadInfoRequest)
+  ))
+_sym_db.RegisterMessage(UploadInfoRequest)
 
 
 # @@protoc_insertion_point(module_scope)

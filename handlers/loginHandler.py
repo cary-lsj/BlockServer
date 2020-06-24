@@ -34,36 +34,20 @@ class LoginHandler(BaseHandler):
         request = msgReq.request.loginRequest
         resp = msgResp.response.loginResponse
         username = request.sID
-        nick = request.sNick
-        headimg = request.sHeadimg
-        gender = request.nGender
-        country = request.sCountry
-        province = request.sProvince
-        city = request.sCity
 
         user = Dal_User().getLoginUser(username)
         if user == None:
             Utils().logDebug("创建新用户:" + str(nick) + " ; openid:" + str(username))
             # 新用户默认第一关解锁
             nowtime = Utils().dbTimeCreate()
-            user = User(id=None, username=username, nickname=nick, headimgurl=headimg, \
-                        tips=0, gates="", sex=gender, city=city, country=country, province=province, \
+            user = User(id=None, username=username, nickname=nick, headimgurl="", \
+                        tips=0, gates="", sex=0, city="", country="", province="", \
                         unionid="", dtips=0, ranklevel=0, gold=0, money=0, goods="", tipstime=nowtime, ads=0, \
                         adtime=nowtime, shares=0, sharetime=nowtime, popadds=0, popaddtime=nowtime)
             Dal_User().addUser(user)
             newgate = Gateinfo(gid=1, uid=user.id, gatestar=0, state=1)
             gid = Dal_Gateinfo().addGateinfo(newgate)
             Dal_User().openNewGates(user.id, [gid])
-
-        if nick != "" and nick != user.nickname:
-            user.nickname = nick
-            kwargs = {"nickname": user.nickname}
-            Dal_User().uqdateUser(user.id, **kwargs)
-
-        if headimg != "" and headimg != user.headimgurl:
-            user.headimgurl = headimg
-            kwargs = {"headimgurl": headimg}
-            Dal_User().uqdateUser(user.id, **kwargs)
 
         gates = Dal_User().getUserGates(user.id)
         for index, id in enumerate(gates):
